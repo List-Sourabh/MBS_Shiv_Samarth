@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout01"
+    android:layout_width="fill_parent"
+    android:layout_height="240dp"
+    android:layout_gravity="center_vertical|center_horizontal|center"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:weightSum="4" >    
+
+    <mbLib.CusFntTextView
+        android:id="@+id/TextView01"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_gravity="center"
+        android:layout_weight="0.8"
+        android:gravity="center"
+        android:text="@string/bank_name"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.5dp"
+        android:background="@color/sub_head_color" />
+
+    <mbLib.CusFntTextView
+        android:id="@+id/txt_dia"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="2.4"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:text="Custom Dialog Example By mayuri...................................."
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:orientation="horizontal"
+        android:layout_weight="0.8"
+        android:weightSum="2" >
+
+        <mbLib.CustomButton
+            android:id="@+id/btn_yes"
+            style="@style/ButtonStyle"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@mipmap/button_style"
+            android:text="@string/alert_yes"
+            android:textColor="@color/white" 
+            android:layout_margin="5dip"/>
+
+        <mbLib.CustomButton
+            android:id="@+id/btn_no"
+            style="@style/ButtonStyle"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@mipmap/button_style"
+            android:text="@string/alert_no"
+            android:textColor="@color/white"
+            android:layout_margin="5dip" />
+    </LinearLayout>
+
+</LinearLayout>

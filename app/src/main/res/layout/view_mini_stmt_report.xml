@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Mini Statement Report Form -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    android:weightSum="8" >
+
+    <include
+        android:id="@+id/inc_id"
+        layout="@layout/header" />
+    <!-- Account Label -->
+
+    <mbLib.CusFntTextView
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_marginTop="15dip"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:text="@string/lbl_acc_no"
+        android:textColor="#372c24"
+        android:textSize="15sp" >
+    </mbLib.CusFntTextView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.5"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <mbLib.CusFntTextView
+            android:id="@+id/txt_actype"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/rep_txt_color"
+            android:textSize="18sp" >
+        </mbLib.CusFntTextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.5"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <mbLib.CusFntTextView
+            android:id="@+id/cur_bal_lbl"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="@string/lbl_avail_balance"
+            android:textColor="#372c24"
+            android:textSize="15sp" >
+        </mbLib.CusFntTextView>
+
+        <mbLib.CusFntTextView
+            android:id="@+id/availbal_lbl"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="@string/current_balance"
+            android:textColor="#372c24"
+            android:textSize="15sp" >
+        </mbLib.CusFntTextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.5"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <mbLib.CusFntTextView
+            android:id="@+id/cur_bal"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:textColor="@color/rep_txt_color"
+            android:textSize="17sp" >
+        </mbLib.CusFntTextView>
+
+        <mbLib.CusFntTextView
+            android:id="@+id/avil_bal"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:textColor="@color/rep_txt_color"
+            android:textSize="17sp" >
+        </mbLib.CusFntTextView>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_marginLeft="7dip"
+        android:layout_marginRight="7dip"
+        android:layout_marginTop="10dip"
+        android:layout_marginBottom="10dip"
+        android:layout_weight="5.5"
+        android:dividerHeight="3dip"
+        android:isScrollContainer="true"
+        android:minHeight="130dip"
+        android:paddingTop="5dip"
+        android:scrollbars="vertical" >
+    </ListView>
+
+    <mbLib.CusFntTextView 
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.5"
+        android:textColor="#CD0000"
+        android:gravity="center"
+        android:text="*Amount Shown Are In Rs."/>
+
+</LinearLayout>

@@ -1,0 +1,177 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    android:weightSum="5.5" >
+
+    <ImageView
+        android:id="@+id/login_imageViewLogo"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_above="@+id/form_linearlayout"
+        android:layout_gravity="top"
+        android:layout_margin="30dp"
+        android:layout_weight="2.65"
+        android:gravity="top"
+        android:src="@mipmap/bank_logo_large" />
+
+    <LinearLayout
+        android:id="@+id/form_linearlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_weight="2.35"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="4" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="11" >
+
+            <ImageView
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/login_username" />
+
+            <mbLib.CustomEditText
+                android:id="@+id/etCustId"
+                style="@style/Login_EditTextStyle"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="10"
+                android:hint="@string/lbl_008"
+                android:gravity="center_vertical"
+                android:inputType="textNoSuggestions"
+                android:nextFocusDown="@+id/Password"
+                android:nextFocusUp="@+id/LoginButton"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dip"
+            android:layout_marginBottom="5dip"
+            android:weightSum="11" >
+
+            <ImageView
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/login_password" />
+
+            <mbLib.CustomEditText
+                android:id="@+id/etMpin"
+                style="@style/Login_EditTextStyle"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="10"
+                android:gravity="center_vertical"
+                android:hint="@string/lbl_009"
+                android:inputType="numberPassword"
+                android:nextFocusDown="@id/Password"
+                android:nextFocusUp="@id/LoginButton"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_gravity="center"
+            android:layout_weight="1.05"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dip"
+            android:layout_marginBottom="5dip"
+            android:weightSum="1" >
+
+            <mbLib.CustomButton
+                android:id="@+id/button1"
+                style="@mipmap/button_style"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/lbl_010"
+                android:textColor="@color/bg_color"
+                android:textSize="20dip" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/pro_bar"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:indeterminate="true"
+            android:textColor="@color/formnm_txtcolor"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:weightSum="4.5" >
+
+            <ImageButton
+                android:id="@+id/contactus"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:src="@mipmap/contact" />
+
+            <mbLib.CusFntTextView
+                android:id="@+id/txt_forgot_pass"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.25"
+                android:gravity="right|center_vertical"
+                android:paddingRight="5dip"
+                android:text="@string/lbl_011"
+                android:textColor="@color/gray" />
+
+            <View
+                android:layout_width="2dip"
+                android:layout_height="30dip"
+                android:background="@android:color/darker_gray"
+                android:gravity="center_vertical" />
+
+            <mbLib.CusFntTextView
+                android:id="@+id/txt_register"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.25"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="5dip"
+                android:text="@string/lbl_012"
+                android:textColor="@color/gray" />
+
+            <ImageButton
+                android:id="@+id/locateus"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:src="@mipmap/location" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

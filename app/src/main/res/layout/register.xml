@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    android:weightSum="1" >
+
+    <include
+        android:id="@+id/inc_hd"
+        layout="@layout/header" />
+
+    <LinearLayout
+        android:id="@+id/form_linearlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="6.3" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:orientation="horizontal"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:weightSum="11" >
+
+            <ImageView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@mipmap/login_username" />
+
+            <mbLib.CustomEditText
+                android:id="@+id/txt_CustId"
+                style="@style/Login_EditTextStyle"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:hint="@string/lbl_008"
+                android:inputType="number"
+                android:nextFocusDown="@+id/txt_MobileNo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="0.3"
+            android:orientation="horizontal"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:weightSum="11" >
+
+            <mbLib.CusFntTextView
+                android:id="@+id/custid1"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text=""
+                android:textSize="12sp" >
+            </mbLib.CusFntTextView>
+
+            <mbLib.CusFntTextView
+                android:id="@+id/custid"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_gravity="right"
+                android:layout_weight="6"
+                android:text="@string/lbl_014"
+                android:textSize="12sp" >
+            </mbLib.CusFntTextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_marginTop="10dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:weightSum="11" >
+
+            <ImageView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@mipmap/mobile" />
+
+            <mbLib.CustomEditText
+                android:id="@+id/txt_MobileNo"
+                style="@style/Login_EditTextStyle"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:hint="@string/lbl_015"
+                android:inputType="number"
+                android:nextFocusDown="@+id/validate" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_gravity="center"
+            android:layout_weight="1.2"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:weightSum="1" >
+
+            <mbLib.CustomButton
+                android:id="@+id/btn_Validate"
+                style="@mipmap/button_style"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dip"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/lbl_016"
+                android:textColor="@color/bg_color"
+                android:textSize="20dip" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

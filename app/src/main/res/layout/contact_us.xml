@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/inc_hd"
+        layout="@layout/header" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:orientation="vertical" 
+        android:weightSum="10">
+
+        <mbLib.CusFntTextView
+            android:id="@+id/bank_email"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_marginTop="10dip"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="5dip"
+            android:layout_weight="1"
+            android:text="@string/lbl_bank_email"
+            android:textColor="#000000"
+            android:background="#e3dede">
+        </mbLib.CusFntTextView>
+
+        <mbLib.CusFntTextView
+            android:id="@+id/txt_bank_email"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_marginTop="5dip"
+            android:editable="false"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="5dip"
+            android:layout_weight="1"
+            android:textColor="#372c24"
+            android:textSize="17sp" >
+        </mbLib.CusFntTextView>
+
+        <mbLib.CusFntTextView
+            android:id="@+id/bank_phone_number"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_marginTop="10dip"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="5dip"
+            android:layout_weight="1"
+            android:text="@string/lbl_bank_phone_number"
+            android:textColor="#000000"
+            android:background="#e3dede">
+        </mbLib.CusFntTextView>
+
+        <mbLib.CusFntTextView
+            android:id="@+id/txt_bank_phone_number"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_marginTop="5dip"
+            android:editable="false"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="5dip"
+            android:layout_weight="1"
+            android:textColor="#372c24"
+            android:textSize="17sp" >
+        </mbLib.CusFntTextView>
+
+        <mbLib.CusFntTextView
+            android:id="@+id/bank_web_url"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_marginTop="10dip"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="5dip"
+            android:layout_weight="1"
+            android:text="@string/lbl_bank_web_url"
+            android:textColor="#000000"
+            android:background="#e3dede" >
+        </mbLib.CusFntTextView>
+
+        <mbLib.CusFntTextView
+            android:id="@+id/txt_bank_web_url"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_marginTop="5dip"
+            android:editable="false"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="5dip"
+            android:layout_weight="1"
+            android:textColor="#372c24"
+            android:textSize="17sp" >
+        </mbLib.CusFntTextView>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color"
+    android:fillViewport="true" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <include
+            android:id="@+id/inc_hd"
+            layout="@layout/header" />
+        <!-- Mini Statement Report Form -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inc_hd"
+            android:orientation="vertical" >
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="15dip"
+                android:gravity="center_horizontal"
+                android:text="@string/frmtitle_list_beneficiary"
+                android:textColor="@color/formnm_txtcolor"
+                android:textStyle="bold"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:id="@+id/header"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/spinner_bg_color"
+                android:weightSum="6" >
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/item1"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="2"
+                    android:gravity="left"
+                    android:text="@string/lbl_nm"
+                    android:textColor="#FFFFFF"
+                    android:width="0dip" >
+                </mbLib.CusFntTextView>
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/item2"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="4"
+                    android:text="@string/lbl_acc_number"
+                    android:textColor="#FFFFFF" >
+                </mbLib.CusFntTextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/header_2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10dp" >
+
+                <ListView
+                    android:id="@+id/benList"
+                    android:layout_width="fill_parent"
+                    android:layout_height="336dp"
+                    android:isScrollContainer="true"
+                    android:minHeight="130dip"
+                    android:scrollbars="vertical" >
+                </ListView>
+            </LinearLayout>
+        </LinearLayout>
+        <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="0dip"
+        android:layout_height="0dip" />
+    </RelativeLayout>
+
+</ScrollView>

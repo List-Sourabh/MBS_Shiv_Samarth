@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color"
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="6" >
+
+        <include
+            android:id="@+id/inc_id"
+            layout="@layout/header" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_gravity="center"
+            android:layout_weight="6"
+            android:orientation="horizontal" >
+
+            <ListView
+                android:id="@+id/tran_listView"
+                style="@style/submenuStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#FFFFFF"
+                android:dividerHeight="2dp" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/pb_wait2"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_gravity="center"
+            android:visibility="invisible" >
+        </ProgressBar>
+
+        <FrameLayout
+            android:id="@+id/frame_container"
+            android:layout_width="0dip"
+            android:layout_height="0dip" />
+    </LinearLayout>
+
+    <!-- Mini Statement Form Ends -->
+
+</ScrollView>

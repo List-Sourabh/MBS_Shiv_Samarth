@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    android:weightSum="2.4" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1"
+        android:background="#2f2583"
+        android:orientation="horizontal"
+        android:weightSum="6" >
+
+        <ImageButton
+            android:id="@+id/btn_home"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="#2f2583"
+            android:src="@mipmap/head_logo"/>
+
+        <ImageView
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="4"
+            android:background="@mipmap/head" />
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="2dp"
+            android:background="#2f2583"
+            android:src="@mipmap/cat_logout"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:background="@mipmap/sub_head" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1"
+        android:background="#d2edfb"
+        android:orientation="horizontal"
+        android:weightSum="6">
+
+        <ImageView
+            android:id="@+id/img_heading"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="5dip"
+            android:layout_marginVertical="2dip"
+            android:layout_weight="1"/>
+        <!-- android:src="@drawable/trans"
+             android:paddingLeft="40dip"
+            android:paddingTop="25dip"
+            android:paddingRight="25dip"
+            android:paddingBottom="25dip"-->
+
+        <TextView
+            android:id="@+id/txt_heading"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="left"
+            android:gravity="center_vertical"
+            android:text="Welcome!"
+            android:textSize="20dip"
+            android:textStyle="bold"
+            android:layout_weight="5"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    
+    android:orientation="vertical"
+    android:weightSum="2" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_marginLeft="7dip"
+        android:layout_marginRight="7dip"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <mbLib.CusFntTextView
+            android:id="@+id/payee"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:text="col_1"
+            android:textColor="#372c24"
+            android:textSize="16sp"
+            android:layout_weight="1"/>
+
+        <mbLib.CusFntTextView
+            android:id="@+id/amount"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="col_2"
+            android:textColor="#372c24"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_marginLeft="7dip"
+        android:layout_marginRight="7dip" 
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <mbLib.CusFntTextView
+            android:id="@+id/biller"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:gravity="left"
+            android:text="col_3"
+           	android:layout_weight="1"
+            android:textColor="#372c24"
+            android:textSize="14dp" />
+        <mbLib.CusFntTextView
+            android:id="@+id/status"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:gravity="right"
+            android:text="col_4"
+            android:layout_weight="1"
+            android:textColor="#372c24"
+            android:textSize="14dp" />
+    </LinearLayout>
+<FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="0dip"
+        android:layout_height="0dip" />
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color"
+    android:fillViewport="true" >
+
+    <!-- Mini Statement Form -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="8" >
+
+        <include
+            android:id="@+id/inc_id"
+            layout="@layout/header" />
+
+        <!-- Account Label -->
+
+        <mbLib.CusFntTextView
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/lbl_acc_no"
+            android:textColor="#372c24"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_gravity="center"
+            android:layout_weight="6"
+            android:orientation="horizontal" >
+
+            <ListView
+                android:id="@+id/acnt_listView"
+                style="@style/submenuStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#FFFFFF"
+                android:dividerHeight="3dp" />
+        </LinearLayout>
+
+        <!-- Get Statement button -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5" />
+
+            <mbLib.CustomButton
+                android:id="@+id/btnGetStmt"
+                style="@style/button_text"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginTop="10dip"
+                android:layout_weight="2"
+                android:background="@mipmap/button_style"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="@string/lbl_get_statement" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/pb_wait2"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_gravity="center"
+            android:visibility="invisible" >
+        </ProgressBar>
+
+        <FrameLayout
+            android:id="@+id/frame_container"
+            android:layout_width="0dip"
+            android:layout_height="0dip" />
+    </LinearLayout>
+
+    <!-- Mini Statement Form Ends -->
+
+</ScrollView>

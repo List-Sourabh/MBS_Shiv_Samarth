@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color"
+        android:orientation="vertical"
+        android:weightSum="12.5" >
+
+        <include
+            android:id="@+id/inc_id"
+            layout="@layout/header" />
+
+        <mbLib.CusFntTextView
+            android:id="@+id/accNo"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="13dip"
+            android:layout_marginTop="13dip"
+            android:layout_weight="0.6"
+            android:gravity="center_horizontal"
+            android:text="@string/lbl_acc_no"
+            android:textColor="@color/rep_txt_color"
+            android:textStyle="bold" />
+
+        <mbLib.CusFntTextView
+            android:id="@+id/cust_name"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="5dip"
+            android:layout_marginTop="12dip"
+            android:layout_weight="0.6"
+            android:gravity="center_horizontal"
+            android:textColor="@color/rep_txt_color"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="15dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+            <mbLib.CusFntTextView
+                android:id="@+id/txtlbl_rate_of_interest"
+                android:layout_width="30dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:padding="1dip"
+                android:text="@string/lbl_rate_of_interest"
+                android:textColor="#372c24" >
+            </mbLib.CusFntTextView>
+
+            <mbLib.CusFntTextView
+                android:id="@+id/txtlbl_sanction_limit"
+                android:layout_width="30dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:padding="1dip"
+                android:text="@string/lbl_sanction_limit"
+                android:textColor="#372c24" >
+            </mbLib.CusFntTextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+            <mbLib.CustomEditText
+                android:id="@+id/txt_rate_of_interest"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="10dip"
+                android:layout_weight="1"
+                android:editable="false"
+                android:padding="1dip"
+                android:textColor="@color/rep_txt_color" >
+            </mbLib.CustomEditText>
+
+            <mbLib.CustomEditText
+                android:id="@+id/txt_sanction_limit"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="10dip"
+                android:layout_weight="1"
+                android:editable="false"
+                android:padding="1dip"
+                android:textColor="@color/rep_txt_color" >
+            </mbLib.CustomEditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="15dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+            <mbLib.CusFntTextView
+                android:id="@+id/txtlbl_drawing_power"
+                android:layout_width="fill_parent"
+                android:layout_height="30dip"
+                android:layout_weight="1"
+                android:padding="1dip"
+                android:text="@string/lbl_drawing_power"
+                android:textColor="#372c24" />
+
+            <mbLib.CusFntTextView
+                android:id="@+id/txtlbl_drawable_amnt"
+                android:layout_width="fill_parent"
+                android:layout_height="30dip"
+                android:layout_weight="1"
+                android:text="@string/lbl_drawable_amt"
+                android:textColor="#372c24" >
+            </mbLib.CusFntTextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+            <mbLib.CustomEditText
+                android:id="@+id/txt_drawing_power"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dip"
+                android:layout_weight="1"
+                android:editable="false"
+                android:padding="1dip"
+                android:textColor="@color/rep_txt_color" >
+            </mbLib.CustomEditText>
+
+            <mbLib.CustomEditText
+                android:id="@+id/txt_drawable_amt"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dip"
+                android:layout_weight="1"
+                android:editable="false"
+                android:padding="1dip"
+                android:textColor="@color/rep_txt_color" >
+            </mbLib.CustomEditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="15dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+            <mbLib.CusFntTextView
+                android:id="@+id/txtlbl_current_bal"
+                android:layout_width="fill_parent"
+                android:layout_height="30dip"
+                android:layout_weight="1"
+                android:padding="1dip"
+                android:text="@string/current_balance"
+                android:textColor="#372c24" />
+
+           
+            <mbLib.CusFntTextView
+                android:id="@+id/txtlbl_instl_frq"
+                android:layout_width="fill_parent"
+                android:layout_height="30dip"
+                android:layout_weight="1"
+                android:padding="1dip"
+                android:text="@string/lbl_instl_frq"
+                android:textColor="#372c24"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+            <mbLib.CustomEditText
+                android:id="@+id/ed_current_bal"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dip"
+                android:layout_weight="1"
+                android:editable="false"
+                android:padding="1dip"
+                android:textColor="@color/rep_txt_color" >
+            </mbLib.CustomEditText>
+
+            <mbLib.CustomEditText
+                android:id="@+id/txt_instlmnt_frq"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dip"
+                android:layout_weight="1"
+                android:editable="false"
+                android:padding="1dip"
+                android:textColor="@color/rep_txt_color" >
+            </mbLib.CustomEditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="15dip"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <mbLib.CusFntTextView
+                android:id="@+id/txtlbl_instl_amt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="1dip"
+                android:text="@string/lbl_instl_amt"
+                android:textColor="#372c24"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="15dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+            <mbLib.CustomEditText
+                android:id="@+id/txt_instlmnt_amt"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dip"
+                android:layout_weight="1"
+                android:editable="false"
+                android:padding="1dip"
+                android:textColor="@color/rep_txt_color"
+                android:visibility="invisible" >
+            </mbLib.CustomEditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_lable"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="15dip"
+            android:layout_weight="0.7"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dip"
+                android:layout_weight="1.4"
+                android:gravity="bottom"
+                android:padding="1dip"
+                android:textColor="@color/rep_txt_color" >
+            </TextView>
+
+            <mbLib.CusFntTextView
+                android:id="@+id/txtlbl_principal"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:gravity="bottom"
+                android:padding="1dip"
+                android:text="Principle"
+                android:textColor="#372c24" />
+
+            <mbLib.CusFntTextView
+                android:id="@+id/txtlbl_interest"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:gravity="bottom"
+                android:text="Interest"
+                android:textColor="#372c24" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_text1"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="5dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <mbLib.CusFntTextView
+                android:id="@+id/txtlbl_pnd_instlmnts"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.4"
+                android:padding="1dip"
+                android:text="@string/lbl_pnd_instl"
+                android:textColor="#372c24"
+                android:visibility="invisible" />
+
+            <mbLib.CustomEditText
+                android:id="@+id/txt_pnd_instlmnts"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dip"
+                android:layout_weight="0.8"
+                android:editable="false"
+                android:padding="1dip"
+                android:textColor="@color/rep_txt_color" >
+            </mbLib.CustomEditText>
+
+            <mbLib.CustomEditText
+                android:id="@+id/txt_pnd_interest"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dip"
+                android:layout_weight="0.8"
+                android:editable="false"
+                android:padding="1dip"
+                android:textColor="@color/rep_txt_color" >
+            </mbLib.CustomEditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_text2"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <mbLib.CusFntTextView
+                android:id="@+id/txtlbl_pndinstl_amt"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1.4"
+                android:padding="1dip"
+                android:text="@string/lbl_instl_amt"
+                android:textColor="#372c24" />
+
+            <mbLib.CustomEditText
+                android:id="@+id/txt_pndinstlmnt_amt"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dip"
+                android:layout_weight="0.8"
+                android:editable="false"
+                android:padding="1dip"
+                android:textColor="@color/rep_txt_color" >
+            </mbLib.CustomEditText>
+
+            <mbLib.CustomEditText
+                android:id="@+id/txt_instlmnt_interest"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dip"
+                android:layout_weight="0.8"
+                android:editable="false"
+                android:padding="1dip"
+                android:textColor="@color/rep_txt_color" >
+            </mbLib.CustomEditText>
+        </LinearLayout>
+        <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="0dip"
+        android:layout_height="0dip" />
+    </LinearLayout>
+
+</ScrollView>

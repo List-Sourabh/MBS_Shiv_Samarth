@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:weightSum="2.8" >
+
+    <include layout="@layout/header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2.8"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:weightSum="2.5" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:weightSum="2" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_marginTop="10dip"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:paddingLeft="12dip"
+                android:paddingRight="10dip"
+                android:weightSum="8" >
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/txt_heading1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:layout_weight="1"
+                    android:text="1. Money can be remitted through IMPS using SMS/Mobile banking PIN only and therefore eAccount holder shall be solely responsible for transactions made using his/her SMS/MOBILE banking PIN."
+                    android:textStyle="italic" />
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/txt_heading2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:layout_weight="1"
+                    android:text="2. Account holder shall keep his/her SMS/MOBILE banking PIN secret and do not disclose it to anyone. "
+                    android:textStyle="italic" />
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/txt_heading3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:layout_weight="1"
+                    android:text=" 3. Transaction request of the account holder shall be processed solely based on information provided by the account holder ,i.e. Mobile Number and MMID. Account holder,shall solely responsible for wrong credit due to wrong information provided by Account holder. "
+                    android:textStyle="italic" />
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/txt_heading4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:layout_weight="1"
+                    android:text="4. The Bank shall not be responsible for non-execution / delay in execution of account holder's request for transaction caused due to system/communication failure or due to any other reason beyond control of bank. "
+                    android:textStyle="italic" />
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/txt_heading5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:layout_weight="1"
+                    android:text="5. The bank may levy charges for IMPS service and Account holder shall bear the charge; as levied by bank from time to time for this service. The charges as and when leaied /modified shall be displayed on, the bank's website , and it shall be the responsibilit of the account holder to visit the banks website from time to time. "
+                    android:textStyle="italic" />
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/txt_heading6"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:layout_weight="1"
+                    android:text="6. Remittance transactions made through IMPS are real time transactions and therefore once initiated , can't be stopped . "
+                    android:textStyle="italic" />
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/txt_heading7"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:layout_weight="1"
+                    android:text="7. The bank may put a cap on amount of transaction allowed through IMPS which may be changed from time to time. "
+                    android:textStyle="italic" />
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/txt_heading8"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:layout_weight="1"
+                    android:text="8. Apart from the above, Account holder shall also be guided by terms and condition; of mobile banking as mentioned at banks website."
+                    android:textStyle="italic" />
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"
+        android:paddingLeft="20dip" 
+        android:layout_marginTop="10dip"
+        android:layout_marginBottom="10dip">
+
+        <CheckBox
+            android:id="@+id/checkBox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+        <mbLib.CusFntTextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/txt_terms"
+            android:textSize="12sp"
+            android:clickable="true" />
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dip"
+            android:layout_marginTop="10dip"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+
+            <mbLib.CustomButton
+                android:id="@+id/btn_otp"
+                style="@style/button_text"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2.6"
+                android:background="@mipmap/button_style"
+                android:gravity="center"
+                android:paddingLeft="10dip"
+                android:text="@string/lbl_otp"
+                android:textSize="20dip" >
+            </mbLib.CustomButton>
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+        </LinearLayout>
+    </LinearLayout>
+<FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="0dip"
+        android:layout_height="0dip" />
+</LinearLayout>
