@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/secu_que_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dip" >
+
+        <mbLib.CusFntTextView
+            android:id="@+id/lbl_security_que1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:text="@string/lbl_security_que"
+            android:textSize="15dip"
+            android:textStyle="italic" >
+        </mbLib.CusFntTextView>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:background="@mipmap/rounded_corner_spinner"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+
+            <mbLib.CusFntTextView
+                android:id="@+id/txt_security_que1"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.6"
+                android:textSize="15dip"
+                android:textStyle="italic" >
+            </mbLib.CusFntTextView>
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2" />
+
+        <mbLib.CustomEditText
+            android:id="@+id/edttxt_security_que1"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.6"
+            android:hint="Answer Here"
+            android:inputType="text"
+            android:padding="10dip"
+            android:text="" >
+        </mbLib.CustomEditText>
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2" />
+
+        <mbLib.CustomButton
+            android:id="@+id/btn_submit_secu_que"
+            style="@style/button_text"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2.6"
+            android:background="@mipmap/button_style"
+            android:gravity="center"
+            android:paddingLeft="10dip"
+            android:text="@string/lbl_020"
+            android:textSize="20dip" >
+        </mbLib.CustomButton>
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/sameBnkTranpro_bar"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_gravity="center"
+        android:visibility="invisible" >
+    </ProgressBar>
+<FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="0dip"
+        android:layout_height="0dip" />
+</LinearLayout>

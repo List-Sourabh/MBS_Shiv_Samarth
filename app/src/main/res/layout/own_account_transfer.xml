@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/inc_hd"
+            layout="@layout/header" />
+
+        <LinearLayout
+            android:id="@+id/same_bnk_layout"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/inc_hd"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginBottom="30dip"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/txt_debit_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:text="@string/lbl_debite_acc"></mbLib.CusFntTextView>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@mipmap/rounded_corner_spinner"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <Spinner
+                        android:id="@+id/sameBnkTranspi_debit_account"
+                        style="@style/spinnerStyle"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|center_horizontal"
+                        android:layout_weight="3.2"
+                        android:background="@mipmap/rounded_corner_spinner"
+                        android:textColor="#ffffff" />
+
+                    <ImageButton
+                        android:id="@+id/spinner_btn"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:background="@color/spinner_bg_color"
+                        android:src="@mipmap/spinner_down" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <mbLib.CusFntTextView
+                android:id="@+id/lblBalance"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="@string/current_balance"
+                android:textColor="#372c24"></mbLib.CusFntTextView>
+
+            <mbLib.CustomEditText
+                android:id="@+id/sameBnkTrantxtBal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"></mbLib.CustomEditText>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <mbLib.CusFntTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:text="@string/lbl_add_ben"></mbLib.CusFntTextView>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@mipmap/rounded_corner_spinner"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <Spinner
+                        android:id="@+id/sameBnkTranspi_sel_beneficiery"
+                        style="@style/spinnerStyle"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|center_horizontal"
+                        android:layout_weight="3.2"
+                        android:background="@mipmap/rounded_corner_spinner" />
+
+                    <ImageButton
+                        android:id="@+id/spinner_btn2"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.8"
+                        android:background="@color/spinner_bg_color"
+                        android:src="@mipmap/spinner_down" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <mbLib.CusFntTextView
+                android:id="@+id/lblAccNo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="@string/lbl_acc_number"
+                android:textColor="#372c24"
+                android:visibility="gone"></mbLib.CusFntTextView>
+
+            <mbLib.CustomEditText
+                android:id="@+id/sameBnkTrantxtAccNo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:visibility="gone"></mbLib.CustomEditText>
+
+            <mbLib.CusFntTextView
+                android:id="@+id/lblAmt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="@string/lbl_amount"
+                android:textColor="#372c24"></mbLib.CusFntTextView>
+
+            <mbLib.CustomEditText
+                android:id="@+id/sameBnkTrantxtAmt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:text=""></mbLib.CustomEditText>
+
+            <mbLib.CusFntTextView
+                android:id="@+id/lblRemk"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="@string/lbl_remark"
+                android:textColor="#372c24"></mbLib.CusFntTextView>
+
+            <mbLib.CustomEditText
+                android:id="@+id/sameBnkTrantxtRemk"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip"
+                android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:maxLength="200"
+                android:text=""></mbLib.CustomEditText>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2" />
+
+                <mbLib.CustomButton
+                    android:id="@+id/sameBnkTranbtn_submit"
+                    style="@style/button_text"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="80dip"
+                    android:layout_weight="2.6"
+                    android:background="@mipmap/button_style"
+                    android:gravity="center"
+                    android:text="@string/lbl_submit_btn"></mbLib.CustomButton>
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/sameBnkTranpro_bar"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_gravity="center"
+                android:visibility="invisible"></ProgressBar>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/confirm_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/inc_hd"
+            android:orientation="vertical"
+            android:visibility="invisible"
+            android:weightSum="12">
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_marginTop="20dip"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/lbl_confirm_msg"
+                android:textSize="14dip" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@android:color/darker_gray" />
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_marginTop="10dip"
+                android:layout_weight="1.5"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:weightSum="2">
+
+                <mbLib.CusFntTextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingRight="3dip"
+                    android:text="@string/lbl_fromacc_no"
+                    android:textColor="@color/lightgray02" />
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/txt_from"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:paddingLeft="3dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_marginTop="10dip"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <mbLib.CusFntTextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingRight="3dip"
+                    android:text="@string/lbl_toacc_msg"
+                    android:textColor="@color/lightgray02" />
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/txt_to"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:paddingLeft="3dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_trantype"
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_marginTop="10dip"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <mbLib.CusFntTextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingRight="3dip"
+                    android:text="@string/lbl_trantype"
+                    android:textColor="@color/lightgray02" />
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/txt_trantype"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:paddingLeft="3dip"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_marginTop="10dip"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <mbLib.CusFntTextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingRight="3dip"
+                    android:text="@string/lbl_amount"
+                    android:textColor="@color/lightgray02" />
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/txt_amount"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="3dip" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_marginTop="10dip"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <mbLib.CusFntTextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingRight="3dip"
+                    android:text="@string/lbl_charges"
+                    android:textColor="@color/lightgray02" />
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/txt_charges"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:paddingLeft="3dip"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_marginTop="10dip"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <mbLib.CusFntTextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingRight="3dip"
+                    android:text="@string/lbl_remark"
+                    android:textColor="@color/lightgray02" />
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/txt_remark"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:paddingLeft="3dip"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_marginTop="10dip"
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2" />
+
+                <mbLib.CustomButton
+                    android:id="@+id/btn_confirm"
+                    style="@mipmap/button_style"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.6"
+                    android:text="@string/confirm" />
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/frame_container"
+            android:layout_width="0dip"
+            android:layout_height="0dip" />
+    </RelativeLayout>
+
+</ScrollView>

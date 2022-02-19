@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color"
+    android:orientation="horizontal" >
+
+    <mbLib.CusFntTextView
+        android:id="@+id/txtHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/darkest_orange"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:text="@string/lbl_fund_transfer"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+</LinearLayout>

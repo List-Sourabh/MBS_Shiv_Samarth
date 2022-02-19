@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:weightSum="4" 
+    android:background="@mipmap/border_ui"
+    android:id="@+id/acclistLayout">
+    
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="0dip"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="5dp"      
+        android:layout_marginTop="5dp"
+        android:background="@mipmap/border_logo"
+        android:gravity="center_vertical"
+        android:layout_weight="0.8" />
+    
+    <mbLib.CusFntTextView
+        android:id="@+id/textView1"
+        android:layout_width="0dip"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dip"
+        android:layout_weight="3.2"
+        android:textColor="@color/white"/>
+    
+</LinearLayout>

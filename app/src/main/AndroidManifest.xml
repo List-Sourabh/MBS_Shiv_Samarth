@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="list.shivsamarth_mbs"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WAKE_LOCK" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_CALENDAR" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" >
+    </uses-permission>
+    <!--<uses-permission android:name="android.permission.READ_SMS" />
+       <uses-permission android:name="android.permission.RECEIVE_SMS" /> -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" >
+    </uses-permission>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-feature  android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false" />
+    <uses-feature android:name="android.hardware.screen.landscape" android:required="false" />
+    <uses-feature android:name="android.hardware.wifi" android:required="false" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/bank_logo"
+        android:requestLegacyExternalStorage="true"
+        android:usesCleartextTraffic="true"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:networkSecurityConfig="@xml/network_security_config"
+       >
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="list.shivsamarth_mbs"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/providers_path"/>
+        </provider>
+        <!--<provider
+          android:name="android.support.v4.content.FileProvider"
+          android:authorities="shivsamarth_mbs_mbs"
+          android:exported="false"
+          android:grantUriPermissions="true" >
+          <meta-data
+              android:name="android.support.FILE_PROVIDER_PATHS"
+              android:resource="@xml/providers_path" />
+      </provider>-->
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name="list.shivsamarth_mbs.SplashPage"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle"  >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="list.shivsamarth_mbs.DashboardActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoTitle" >
+        </activity>
+        <activity
+            android:name="list.shivsamarth_mbs.ValidateSecQueActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoTitle" >
+        </activity>
+        <activity
+            android:name="list.shivsamarth_mbs.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoTitle" >
+
+        </activity>
+        <activity
+            android:name="list.shivsamarth_mbs.Register"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle"/>
+        <activity
+            android:name="list.shivsamarth_mbs.QrcodeSendActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:hardwareAccelerated="true"
+            android:theme="@style/AppThemeNoTitle" />
+        <activity
+            android:name="list.shivsamarth_mbs.Recharges"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoTitle" />
+        <activity
+            android:name="list.shivsamarth_mbs.ChangeMpin"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoTitle" />
+        <activity
+            android:name="list.shivsamarth_mbs.GetCustID"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle" >
+        </activity>
+        <activity
+            android:name="list.shivsamarth_mbs.Recharge_mobile"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoTitle"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name="list.shivsamarth_mbs.BillPayment"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoTitle" />
+        <activity
+            android:name="list.shivsamarth_mbs.AddPayee"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoTitle" />
+        <activity
+            android:name="list.shivsamarth_mbs.Recharges_removepayee"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoTitle" />
+        <activity
+            android:name="list.shivsamarth_mbs.RemovePayee"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoTitle" />
+        <activity
+            android:name="list.shivsamarth_mbs.ViewHistory"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoTitle" />
+        <activity
+            android:name="list.shivsamarth_mbs.History"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoTitle" />
+        <activity
+            android:name="list.shivsamarth_mbs.BillList"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoTitle" />
+        <activity
+            android:name="list.shivsamarth_mbs.BillCategory"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoTitle" />
+        <activity
+            android:name="list.shivsamarth_mbs.PayBill"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoTitle" />
+        <activity
+            android:name="list.shivsamarth_mbs.RemoveBiller"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoTitle" />
+        <activity
+            android:name="list.shivsamarth_mbs.SecurityQuestion"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle" />
+        <activity
+            android:name="list.shivsamarth_mbs.OTPActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle" />
+        <activity
+            android:name="list.shivsamarth_mbs.SetMPIN"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle" />
+        <activity
+            android:name="list.shivsamarth_mbs.ForgotPassword"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle" />
+        <activity
+            android:name="list.shivsamarth_mbs.LocateUs"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle" />
+        <activity
+            android:name="list.shivsamarth_mbs.ContactUs"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle" />
+        <activity
+            android:name="list.shivsamarth_mbs.GetTermsCondition"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle" />
+        <activity
+            android:name="list.shivsamarth_mbs.ManageBeneficiaryMenuActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle" />
+        <activity
+            android:name="list.shivsamarth_mbs.ListBeneficiary"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle" />
+        <activity
+            android:name="list.shivsamarth_mbs.AddSameBankBeneficiary"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle" />
+        <activity
+            android:name="list.shivsamarth_mbs.AddOtherBankBeneficiary"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle" />
+        <activity
+            android:name="list.shivsamarth_mbs.BeneficiaryOtp"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle" />
+        <activity
+            android:name="list.shivsamarth_mbs.EditSameBankBeneficiary"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle" />
+        <activity
+            android:name="list.shivsamarth_mbs.RemoveBeneficiary"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle" />
+        <activity
+            android:name="list.shivsamarth_mbs.TransferHistory"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle" />
+        <activity
+            android:name="list.shivsamarth_mbs.TransferHistoryRpt"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle" />
+
+        <activity
+            android:name="list.shivsamarth_mbs.LoanAccountDetails"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle" >
+        </activity>
+        <activity
+            android:name="list.shivsamarth_mbs.LoanAccount"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle" >
+        </activity>
+        <activity
+            android:name="list.shivsamarth_mbs.ShowFdAccountDetails"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle" >
+        </activity>
+        <activity
+            android:name="list.shivsamarth_mbs.ShowFdAccount"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle" >
+        </activity>
+        <activity
+            android:name="list.shivsamarth_mbs.SameBankTransfer"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle" >
+        </activity>
+        <activity
+            android:name="list.shivsamarth_mbs.OwnAccountTransfer"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle" >
+        </activity>
+        <activity
+            android:name="list.shivsamarth_mbs.QrcodeRcvActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle" >
+        </activity>
+        <activity
+            android:name="list.shivsamarth_mbs.FundTransferMenuActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle" >
+        </activity>
+        <activity
+            android:name="list.shivsamarth_mbs.MiniStmtActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle" >
+        </activity>
+        <activity
+            android:name="list.shivsamarth_mbs.MiniStmtReport"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle" >
+        </activity>
+        <activity
+            android:name="list.shivsamarth_mbs.SavingAccounts"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle" >
+        </activity>
+        <activity
+            android:name="list.shivsamarth_mbs.SavingAccountsDetails"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle" >
+        </activity>
+        <activity
+            android:name="list.shivsamarth_mbs.ShowAccForQrcode"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle" >
+        </activity>
+        <activity
+            android:name="list.shivsamarth_mbs.SessionOut"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle" >
+        </activity>
+        <activity
+            android:name="list.shivsamarth_mbs.TransferOTP"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle" >
+        </activity>
+        <activity
+            android:name="list.shivsamarth_mbs.OtherBankTranRTGS"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle" >
+        </activity>
+        <activity
+            android:name="list.shivsamarth_mbs.OtherBankTranIFSC"
+            android:label="@string/app_name"
+            android:theme="@style/AppThemeNoTitle" >
+        </activity>
+
+
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:clearTaskOnLaunch="true"
+            android:screenOrientation="sensorLandscape"
+            android:stateNotNeeded="true"
+            android:theme="@style/zxing_CaptureTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_key" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>

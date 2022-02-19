@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="12" >
+
+    <include layout="@layout/header" />
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="12"
+        class="com.google.android.gms.maps.SupportMapFragment" >
+    </fragment>
+
+    
+    <!-- <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="Latitude" android:layout_weight="1" />
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="Longitude" android:layout_weight="1" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+            <EditText
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtLati" android:paddingRight="5dip" 
+                android:layout_weight="1" />
+            <EditText
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtLongi" android:paddingLeft="5dip"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layBut"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_below="@id/map"
+        android:layout_weight="1.5"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <Button
+            android:id="@+id/btStart"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Start Tracking" />
+
+        <Button
+            android:id="@+id/btAddLoc"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Add Location" />
+
+        <Button
+            android:id="@+id/btCalcArea"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Calculate Area" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_below="@id/layBut"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <EditText
+            android:id="@+id/txtArea"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+        </EditText>
+
+        <ToggleButton
+            android:id="@+id/toglMap"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="Terrian"
+            android:textOn="Satelite" />
+
+        <ToggleButton
+            android:id="@+id/toglDrag"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="Dragg Off"
+            android:textOn="Dragg On" />
+    </LinearLayout> -->
+
+</LinearLayout>

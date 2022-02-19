@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="1" >
+
+    <include layout="@layout/header" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:weightSum="12.5"
+        android:background="@color/bg_color">
+
+      <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3"
+          android:id="@+id/lyt_usrnm_lbl" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+
+            <mbLib.CusFntTextView
+                android:id="@+id/lbl_Pref_user"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="2.6"
+                android:inputType="text"
+                android:padding="1dip"
+                android:gravity="bottom"
+                android:text="@string/enter_prefer">
+            </mbLib.CusFntTextView>
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+        </LinearLayout>
+        
+      <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3" android:id="@+id/lyt_usrnm_txt">
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+
+            <mbLib.CustomEditText
+                android:id="@+id/txt_prefer_usrname"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.5"
+               android:inputType="text"
+                android:padding="1dip"
+                android:text="" >
+            </mbLib.CustomEditText>
+
+            <mbLib.CusFntTextView
+                android:id="@+id/check_availability"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.3" 
+                android:text="@string/enter_avail"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+
+            <mbLib.CusFntTextView
+                android:id="@+id/lbl_pass"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="2.6"
+                android:inputType="text"
+                android:padding="1dip"
+                android:gravity="bottom"
+                android:text="@string/enter_pass">
+            </mbLib.CusFntTextView>
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+
+            <mbLib.CustomEditText
+                android:id="@+id/txt_enter_pass"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.6"
+                android:inputType="numberPassword"
+                android:padding="5dip"
+                android:hint=""
+                android:text="" >
+            </mbLib.CustomEditText>
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+
+            <mbLib.CusFntTextView
+                android:id="@+id/lbl_"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="2.6"
+                android:inputType="text"
+                android:padding="1dip"
+                android:gravity="bottom"
+                android:text="@string/re_enter_pass" >
+            </mbLib.CusFntTextView>
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+
+            <mbLib.CustomEditText
+                android:id="@+id/txt_re_enter_pass"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.6"
+                android:inputType="numberPassword"
+                android:padding="5dip"
+                android:text="" >
+            </mbLib.CustomEditText>
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+
+            <mbLib.CusFntTextView
+                android:id="@+id/lbl_pass1"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="2.6"
+                android:inputType="text"
+                android:padding="1dip"
+                android:gravity="bottom"
+                android:text="@string/lbl_new_tran_mpin" >
+            </mbLib.CusFntTextView>
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+
+            <mbLib.CustomEditText
+                android:id="@+id/txt_enter_tran_pass"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.6"
+                android:inputType="numberPassword"
+                android:padding="5dip"
+                android:text="" >
+            </mbLib.CustomEditText>
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+
+            <mbLib.CusFntTextView
+                android:id="@+id/lbl_re_enter_pass"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="2.6"
+                android:inputType="text"
+                android:padding="1dip"
+                android:gravity="bottom"
+                android:text="@string/lbl_retype_tran_mpin" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+
+            <mbLib.CustomEditText
+                android:id="@+id/txt_re_enter_tran_pass"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.6"
+                android:inputType="numberPassword"
+                android:padding="5dip"
+                android:text="" >
+            </mbLib.CustomEditText>
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1.25"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dip"
+            android:weightSum="3" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+
+            <mbLib.CustomButton
+                android:id="@+id/btn_save_pass"
+                style="@style/button_text"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:layout_weight="2.6"
+                android:background="@mipmap/button_style"
+                android:gravity="center"
+                android:padding="1dip"
+                android:text="@string/lbl_020" >
+            </mbLib.CustomButton>
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1.25"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+
+            <mbLib.CustomButton
+                android:id="@+id/btn_reset"
+                style="@style/button_text"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:layout_weight="2.6"
+                android:background="@mipmap/button_style"
+                android:gravity="center"
+                android:padding="1dip"
+                android:text="@string/lbl_reset">
+            </mbLib.CustomButton>
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" />
+        </LinearLayout>
+    </LinearLayout>
+<FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="0dip"
+        android:layout_height="0dip" />
+</LinearLayout>

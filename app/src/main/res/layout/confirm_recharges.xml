@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/othr_confirm_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/inc_hd"
+            android:orientation="vertical"
+           
+            android:weightSum="10" >
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_marginTop="20dip"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="@string/lbl_confirm_msg"
+                android:textSize="16dip" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_marginTop="15dip"
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                android:paddingBottom="10dip"
+                android:weightSum="2" >
+
+                <mbLib.CusFntTextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingRight="3dip"
+                    android:text="@string/lbl_confrech_oper"
+                    android:textColor="@color/lightgray02" />
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/txt_confrech_oper"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:paddingLeft="3dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_marginTop="15dip"
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                android:paddingBottom="10dip"
+                android:weightSum="2"
+                android:id="@+id/layout_confrech_mobno" >
+
+                <mbLib.CusFntTextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingRight="3dip"
+                    android:text="@string/lbl_confrech_mobno"
+                    android:textColor="@color/lightgray02" />
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/txt_confrech_mobno"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:paddingLeft="3dip" />
+            </LinearLayout>
+
+            
+             <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_weight="2"
+                android:layout_marginTop="15dip"
+                android:orientation="horizontal"
+                android:weightSum="2" 
+                android:id="@+id/layout_confrech_consuno"
+                 android:paddingBottom="10dip"
+                 android:visibility="gone">
+
+                <mbLib.CusFntTextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingRight="3dip"
+                    android:textColor="@color/lightgray02"
+                    android:text="@string/lbl_confrech_consuno" />
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/txt_confrech_consuno"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:paddingLeft="3dip"
+                    android:text="" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_marginTop="15dip"
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                android:paddingBottom="10dip"
+                android:weightSum="2" >
+
+                <mbLib.CusFntTextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:paddingRight="3dip"
+                    android:text="@string/lbl_confrech_accnm"
+                    android:textColor="@color/lightgray02" />
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/txt_confrech_accnm"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:paddingLeft="3dip"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_marginTop="15dip"
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                android:weightSum="3" >
+
+                <mbLib.CustomButton
+                    android:id="@+id/btn_confirm"
+                    style="@mipmap/button_style"
+                    android:background="@mipmap/button_style"
+                    android:layout_width="0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.5"
+                    android:layout_margin="5dip"
+                    android:textColor="@color/white"
+                    android:text="@string/confirm" />
+
+               <mbLib.CustomButton
+                    android:id="@+id/btncnf_back"
+                    style="@mipmap/button_style"
+                    android:background="@mipmap/button_style"
+                    android:layout_width="0dip"
+                    android:layout_margin="5dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.5"
+                     android:textColor="@color/white"
+                    android:text="@string/lbl_back" />
+            </LinearLayout>
+        </LinearLayout>

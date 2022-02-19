@@ -1,0 +1,170 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppBaseTheme" parent="android:Theme.Light"></style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:windowBackground">@mipmap/bg3</item>
+        <item name="android:editTextStyle">@style/App_EditTextStyle</item>
+        <item name="android:buttonStyle">@style/ButtonStyle</item>
+        <item name="android:textViewStyle">@style/MyTextViewStyle</item>
+    </style>
+
+    <style name="windowTitleStyle">
+        <item name="android:textColor">#82461A</item>
+        <item name="android:padding">12dip</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="AppThemeNoTitle" parent="AppBaseTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/spinner_bg_color</item>
+        <item name="android:buttonStyle">@style/ButtonStyle</item>
+        <item name="android:editTextStyle">@style/App_EditTextStyle</item>
+    </style>
+
+    <style name="windowTitleLogoStyle">
+        <item name="android:icon">@mipmap/ic_launcher</item>
+    </style>
+
+    <style name="MyTabStyle" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="CodeFontH" parent="AppBaseTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#f8f9fe</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+        <item name="android:background">@color/headbgcolor</item>
+        <item name="android:windowBackground">@mipmap/bg3</item>
+    </style>
+
+    <style name="button_text">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#f8f9fe</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="submenuStyle">
+        <item name="android:textColor">#b23a10</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="spinnerStyle">
+        <item name="android:dropDownWidth">fill_parent</item>
+        <item name="android:dropDownHeight">wrap_content</item>
+        <item name="android:background">#f79e5c</item>
+        <item name="android:textColor">#F01533</item>
+        <item name="android:textSize">35sp</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">2dp</item>
+    </style>
+
+    <style name="ButtonStyle" parent="android:Widget.Button">
+        <item name="android:paddingLeft">20dip</item>
+        <item name="android:paddingRight">20dip</item>
+        <item name="android:paddingTop">10dip</item>
+        <item name="android:paddingBottom">10dip</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:background">@mipmap/button_style</item>
+        <!-- #06546b -->
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="HomeButtonStyle" parent="android:Widget.Button">
+        <item name="android:paddingLeft">1dip</item>
+        <item name="android:paddingRight">1dip</item>
+        <item name="android:paddingTop">1dip</item>
+        <item name="android:paddingBottom">1dip</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:background">@mipmap/button_selector</item>
+    </style>
+
+    <style name="FooterBar">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">#dedede</item>
+    </style>
+
+    <style name="App_EditTextStyle" parent="@android:style/Widget.EditText">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textColorHint">#8E9A9A</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@mipmap/custom_textview</item>
+        <item name="android:padding">5dip</item>
+    </style>
+
+    <style name="App_TextViewStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">#372c24</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="WindowTitleBackground">
+        <item name="android:background">#FF0000</item>
+    </style>
+
+    <style name="MyTextViewStyle" parent="@android:style/Widget.TextView">
+       
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="HeadingTextViewStyle" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textColorHint">#15f4ee</item>
+        <item name="android:background">@mipmap/border_logo</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">18dip</item>
+    </style>
+    
+    <style name="radionbutton" parent="@android:style/Widget.CompoundButton.RadioButton">
+    	<item name="android:button">@mipmap/radiobutton_drawable</item>
+  	</style>
+  	
+     <style name="Login_EditTextStyle" parent="@android:style/Widget.EditText">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textColorHint">#CCCCCC</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:padding">10dip</item>
+    </style>
+    <!--   -->
+    
+     <style name="DashboardButton">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:drawablePadding">2dp</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#b23a10</item><!--  DD4814  -->
+        <item name="android:background">@mipmap/border_ui</item>
+        <!-- <item name="android:divider">#736F6E</item>
+        <item name="android:dividerHeight">1dip</item> -->
+    </style> 
+    
+      <style name="MPIN_EditTextStyle" parent="@android:style/Widget.EditText">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textColorHint">#15f4ee</item>
+        <!-- <item name="android:background">#ffffff</item> -->
+        <item name="android:textStyle">bold</item>
+        <item name="android:inputType">numberPassword</item>
+        <item name="android:padding">10dip</item>
+    </style>
+     <style name="zxing_CaptureTheme" parent="android:Theme.Black.NoTitleBar.Fullscreen">
+  </style>
+</resources>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="green">#008000</color>
+    <color name="logo_blue">#0000fe</color>
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="bg_color">#FFFFFF</color>
+    <color name="sub_head_color">#ccc9c9</color>
+    <color name="orange">#0758AA</color>
+    <color name="headbgcolor">#db6715</color>
+   <color name="btn_color">#f58634</color>
+    <color name="spinner_bg_color">#422874</color>
+    <color name="dark_navy_blue">#08425a</color>
+    <color name="lightgray1">#E9EBEC</color>
+    <color name="formnm_txtcolor">#000</color>
+    <color name="gray">#808080</color>
+    <color name="samarth_text_color">#340c6f</color>
+    <color name="rep_txt_color">#06546b</color>
+    <color name="lightgray02">#a19d9d</color>
+    <color name="darkest_blue">#076885</color>
+    <color name="zxing_possible_result_points">#c0ffbd21</color>
+    <color name="darkest_orange">#924209</color>
+    <color name="zxing_result_view">#b0000000</color>
+    <color name="zxing_status_text">#ffffffff</color>
+    <color name="zxing_transparent">#00000000</color>
+    <color name="zxing_viewfinder_laser">#ffcc0000</color>
+ <!-- Android standard ICS color -->
+    <color name="zxing_viewfinder_mask">#60000000</color>
+    <color name="zxing_custom_possible_result_points">#903A89CF</color>
+    <color name="zxing_custom_result_view">#b0000000</color>
+    <color name="zxing_custom_viewfinder_laser">#1976D2</color>
+    <color name="zxing_custom_viewfinder_mask">#60000000</color>
+    <color name="list_item_title">#000000</color>
+    <color name="list_background">#fff</color>
+    <!-- 303030 -->
+    <color name="list_background_pressed">#db6715</color>
+    <!-- 992416 -->
+    <color name="list_divider">#272727</color>
+    <!-- 272727 -->
+    <color name="counter_text_bg">#626262</color>
+    <color name="counter_text_color">#c5c4c4</color>
+    <color name="blur_buttonlist">#93cbec</color>
+    <color name="buttomrechargecolor">#0077bd</color>
+    <color name="red_color">#ff0000</color>
+    <color name="splash_bg_color">#FFEB7F</color>
+    <color name="button_bg_color">#ff2323</color>
+    <color name="cyan">#15f4ee</color>
+
+    <color name="main_color">#de0024</color>
+    <color name="second_color">#f6d500</color>
+    <color name="third_color">#eb8311</color>
+    <color name="btn_bg_color">#ef7c00</color>
+
+ <color name="sbk_text_clr">#386c46</color><!-- #386c46 -->
+
+</resources>

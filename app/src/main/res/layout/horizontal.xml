@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <mbLib.CusFntTextView
+        android:id="@+id/plan_id"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:paddingRight="5dp"
+        android:scaleType="fitXY"
+        android:gravity="center"
+        android:layout_margin="2dip"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:background="#ef7c00"/>
+    <!--android:background="#0000fe" 422874-->
+
+</LinearLayout>

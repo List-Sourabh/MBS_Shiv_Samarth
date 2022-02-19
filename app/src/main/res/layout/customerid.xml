@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:weightSum="4" >
+
+    <include layout="@layout/header" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_marginTop="10dip"
+        android:layout_weight="0.5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:weightSum="4.2" >
+
+        <mbLib.CustomEditText
+            android:id="@+id/txt_accno"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_marginTop="10dip"
+            android:layout_weight="1"
+            android:hint="@string/lbl_018"
+            android:inputType="number"
+            android:maxLength="16"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="" >
+
+            <requestFocus />
+        </mbLib.CustomEditText>
+
+        <mbLib.CustomEditText
+            android:id="@+id/txt_mobileno"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_marginTop="10dip"
+            android:layout_weight="1"
+            android:hint="@string/lbl_019"
+            android:inputType="number"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="" >
+        </mbLib.CustomEditText>
+
+        <mbLib.CustomButton
+            android:id="@+id/btn_proceed"
+            style="@mipmap/button_style"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_gravity="center"
+            android:layout_marginLeft="35dip"
+            android:layout_marginRight="35dip"
+            android:layout_marginTop="15dip"
+            android:layout_weight="1.2"
+            android:text="@string/lbl_020"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <mbLib.CusFntTextView
+            android:id="@+id/txt_heading"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_below="@+id/imageViewLogo"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:weightSum="4" >
+
+        <mbLib.CusFntTextView
+            android:id="@+id/custid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dip"
+            android:layout_weight="2"
+            android:text="" >
+        </mbLib.CusFntTextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:layout_weight="2"
+            android:text="" >
+        </TextView>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="0dip"
+        android:layout_height="0dip" />
+
+</LinearLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <include layout="@layout/header" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="6" >
+
+        <LinearLayout
+            android:id="@+id/main_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="5"
+            android:background="@mipmap/homeborder"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:weightSum="5" >
+
+            <ListView
+                android:id="@+id/list_bill"
+                style="@style/submenuStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:cacheColorHint="#FFFFFF"
+                android:dividerHeight="2dp"
+                android:padding="5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/confirm_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:weightSum="5" >
+
+            <mbLib.CusFntTextView
+                android:id="@+id/nopayee"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dip"
+                android:background="#fff"
+                android:gravity="center"
+                android:padding="10dip"
+                android:text="@string/lbl_no_payee"
+                android:textSize="20dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="0.8"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <mbLib.CustomButton
+                android:id="@+id/btnAddBiller"
+                style="@style/button_text"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10dip"
+                android:layout_weight="1"
+                android:background="@mipmap/button_style"
+                android:text="@string/lbl_add_biller" />
+
+            <mbLib.CustomButton
+                android:id="@+id/btnRemoveBiller"
+                style="@style/button_text"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10dip"
+                android:layout_weight="1"
+                android:background="@mipmap/button_style"
+                android:text="@string/lbl_remove_biller" />
+
+            <mbLib.CustomButton
+                android:id="@+id/btnHistory"
+                style="@style/button_text"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10dip"
+                android:layout_weight="1"
+                android:background="@mipmap/button_style"
+                android:text="@string/lbl_history" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="0dip"
+        android:layout_height="0dip" />
+
+</LinearLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="1" >
+
+    <include
+        android:id="@+id/inc_hd"
+        layout="@layout/header" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/inc_hd"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="7" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <mbLib.CustomButton
+                android:id="@+id/btnmobile"
+                style="@style/button_text"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@mipmap/button_style"
+                android:text="@string/lbl_rech_mobile" />
+
+            <mbLib.CustomButton
+                android:id="@+id/btnDTH"
+                style="@style/button_text"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@mipmap/button_style"
+                android:text="@string/lbl_rech_DTH" />
+
+            <mbLib.CustomButton
+                android:id="@+id/btndatacard"
+                style="@style/button_text"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@mipmap/button_style"
+                android:text="@string/lbl_rech_Datacard" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="5"
+            android:background="@mipmap/homeborder"
+            android:orientation="horizontal" >
+
+            <ListView
+                android:id="@+id/rechargelist"
+                style="@style/submenuStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="#FFFFFF"
+                android:dividerHeight="2dip"
+                android:padding="5dp" />
+            <mbLib.CusFntTextView
+             
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/emptyElement"
+              android:text="No Payee"
+              android:textStyle="bold"
+              android:textSize="15sp"
+              android:layout_marginLeft="15dp"
+              android:layout_gravity="center"
+               android:layout_centerInParent="true"
+              android:visibility="gone"/>
+             
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <mbLib.CustomButton
+                android:id="@+id/btnAddNew"
+                style="@style/button_text"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@mipmap/button_style"
+                android:text="@string/lbl_rech_AddNew" />
+
+            <mbLib.CustomButton
+                android:id="@+id/btnRemove"
+                style="@style/button_text"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@mipmap/button_style"
+                android:text="@string/lbl_rech_Remove" />
+            
+            <mbLib.CustomButton
+                android:id="@+id/btnHistory"
+                style="@style/button_text"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@mipmap/button_style"
+                android:text="@string/lbl_view_history"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_wait4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:visibility="invisible" >
+    </ProgressBar>
+<FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="0dip"
+        android:layout_height="0dip" />
+</LinearLayout>

@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_color"
+    android:fillViewport="true"
+    tools:context=".ChangeMpinActivity" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <include
+            android:id="@+id/inc_id"
+            layout="@layout/header" />
+        <!-- Change MPIN Form -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/inc_id"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:orientation="horizontal"
+                android:weightSum="2" >
+
+                <RadioGroup
+                    android:id="@+id/groupradio"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <mbLib.CusFntRadioButton
+                        android:id="@+id/radiobtn_mpin"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/lbl_radiompn" />
+
+                    <mbLib.CusFntRadioButton
+                        android:id="@+id/radiobtn_tranmpin"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/lbl_radiotranmpn" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_mpin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:weightSum="6" >
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/txt1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/lbl_old_mpin"
+                    android:textColor="#372c24" >
+                </mbLib.CusFntTextView>
+
+                <mbLib.CustomEditText
+                    android:id="@+id/etOldMpin"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="numberPassword"
+                    android:text="" >
+                </mbLib.CustomEditText>
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/txt2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/lbl_new_mpin"
+                    android:textColor="#372c24" >
+                </mbLib.CusFntTextView>
+
+                <mbLib.CustomEditText
+                    android:id="@+id/etNewMpin"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="numberPassword"
+                    android:text="" >
+                </mbLib.CustomEditText>
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/txt3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/lbl_retype_mpin"
+                    android:textColor="#372c24" >
+                </mbLib.CusFntTextView>
+
+                <mbLib.CustomEditText
+                    android:id="@+id/etRetypeNewMpin"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="numberPassword"
+                    android:text="" >
+                </mbLib.CustomEditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_tranmpin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:weightSum="6" >
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/txt1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/lbl_old_tran_mpin"
+                    android:textColor="#372c24" >
+                </mbLib.CusFntTextView>
+
+                <mbLib.CustomEditText
+                    android:id="@+id/etOldTranMpin"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="numberPassword"
+                    android:text="" >
+                </mbLib.CustomEditText>
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/txt2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/lbl_new_tran_mpin"
+                    android:textColor="#372c24" >
+                </mbLib.CusFntTextView>
+
+                <mbLib.CustomEditText
+                    android:id="@+id/etNewTranMpin"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="numberPassword"
+                    android:text="" >
+                </mbLib.CustomEditText>
+
+                <mbLib.CusFntTextView
+                    android:id="@+id/txt3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/lbl_retype_tran_mpin"
+                    android:textColor="#372c24" >
+                </mbLib.CusFntTextView>
+
+                <mbLib.CustomEditText
+                    android:id="@+id/etRetypeNewTranMpin"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="numberPassword"
+                    android:text="" >
+                </mbLib.CustomEditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+android:layout_marginTop="10dip"
+                android:orientation="vertical"
+                android:weightSum="3" 
+                android:id="@+id/layout_otp"
+                android:visibility="gone"
+                >
+    <mbLib.CusFntTextView
+                    android:id="@+id/txtotp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:text="@string/lbl_OTP"
+                    android:layout_gravity="center_horizontal"
+                     android:gravity="center"
+                      android:textSize="20sp"
+                    android:textColor="#372c24" >
+                </mbLib.CusFntTextView>
+    <mbLib.CustomEditText
+                    android:id="@+id/etotptxt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:text="" >
+                </mbLib.CustomEditText>
+                <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:weightSum="3">
+ <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2" />
+  <mbLib.CusFntTextView
+            android:id="@+id/txt_ref_id"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_weight="2.6"
+            android:text="@string/lbl_ref_id"
+            android:textSize="15dip"
+            android:textColor="#0758AA"/>
+ <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2" />
+    </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dip"
+                android:orientation="horizontal"
+                android:weightSum="3" >
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2" />
+
+                <mbLib.CustomButton
+                    android:id="@+id/btnChangeMpin"
+                    style="@style/button_text"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2.6"
+                    android:background="@mipmap/button_style"
+                    android:gravity="center"
+                    android:text="@string/lbl_change_btn"
+                    android:textSize="20dip" >
+                </mbLib.CustomButton>
+
+                <ProgressBar
+                    android:id="@+id/pb_wait4"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.2"
+                    android:visibility="invisible" >
+                </ProgressBar>
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/frame_container"
+            android:layout_width="0dip"
+            android:layout_height="0dip" />
+    </RelativeLayout>
+
+</ScrollView>
