@@ -135,9 +135,6 @@ public class LoginActivity extends CustomWindow implements OnClickListener,Locat
 		dbms = new DatabaseManagement("list.shivsamarth_mbs", "shivsamMBS");
 		customerId=getCustId();
 		Log.e("onCreate","customerId== "+customerId);
-		Log.e("onCreate","customerId== "+customerId);
-		Log.e("onCreate","customerId== "+customerId);
-		Log.e("onCreate","customerId== "+customerId);
 		//setContentView(R.layout.login);
 		et_custid = (EditText) findViewById(R.id.etCustId);
 		et_mpin = (EditText) findViewById(R.id.etMpin);
