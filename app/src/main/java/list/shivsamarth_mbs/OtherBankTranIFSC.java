@@ -31,9 +31,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.ksoap2.SoapEnvelope;
@@ -46,6 +43,8 @@ import java.util.ArrayList;
 
 import javax.crypto.spec.SecretKeySpec;
 
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import mbLib.CryptoClass;
 import mbLib.DatabaseManagement;
 import mbLib.DialogBox;
@@ -151,7 +150,7 @@ public class OtherBankTranIFSC extends Activity implements OnClickListener {
         btn_submit.setOnClickListener(this);
 
         btn_confirm = (Button) findViewById(R.id.btn_confirm);
-       // btn_con_back = (Button) findViewById(R.id.btn_confirm_back);
+        // btn_con_back = (Button) findViewById(R.id.btn_confirm_back);
         txt_trantype = (TextView) findViewById(R.id.txt_trantype);
         txt_remark = (TextView) findViewById(R.id.txt_remark);
         txt_from = (TextView) findViewById(R.id.txt_from);
@@ -161,7 +160,7 @@ public class OtherBankTranIFSC extends Activity implements OnClickListener {
         //txtTranId=(TextView)findViewById(R.id.txt_tranid);
         tvIfsc = (TextView) findViewById(R.id.tv_ifsc);
         btn_confirm.setOnClickListener(this);
-       // btn_con_back.setOnClickListener(this);
+        // btn_con_back.setOnClickListener(this);
         // btn_submit.setTypeface(tf_calibri);
         btn_home = (ImageButton) findViewById(R.id.btn_home);
         //btn_back = (ImageButton) findViewById(R.id.btn_back);
@@ -326,7 +325,7 @@ public class OtherBankTranIFSC extends Activity implements OnClickListener {
                 .setOnItemSelectedListener(new OnItemSelectedListener() {
 
                     @Override
-                    public void onItemSelected(AdapterView<?> arg0, View arg1,int arg2, long arg3) {
+                    public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                         // ////String
                         // str=spi_debit_account.getItemAtPosition(spi_debit_account.getSelectedItemPosition()).toString();
                         str = spi_debit_account.getSelectedItem().toString();
@@ -700,6 +699,7 @@ public class OtherBankTranIFSC extends Activity implements OnClickListener {
             }
 
             String[] debAccArr = new String[arrList.size()];
+
             debAccArr = arrList.toArray(debAccArr);
             //CustomeSpinnerAdapter debAccs = new CustomeSpinnerAdapter(act,R.layout.spinner_layout, debAccArr);
             //CustomeSpinnerAdapter debAccs = new CustomeSpinnerAdapter(act,android.R.layout.simple_spinner_item, debAccArr);
@@ -738,7 +738,7 @@ public class OtherBankTranIFSC extends Activity implements OnClickListener {
                 if (!(str2[4].equals("NA") || (str2[3].equals("-9999")))) {
                     benName = str2[2] + "(" + str2[1] + ")";
                     arrList.add(benName);
-                    System.out.println("=============== benificiary Name is:======"+ benName);
+                    System.out.println("=============== benificiary Name is:======" + benName);
                 }
             }
 
@@ -1879,6 +1879,7 @@ public class OtherBankTranIFSC extends Activity implements OnClickListener {
                     }
                 }
 
+
             } catch (JSONException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
@@ -2279,7 +2280,12 @@ public class OtherBankTranIFSC extends Activity implements OnClickListener {
                             retMess = getString(R.string.alert_194);
                             //loadProBarObj.dismiss();
                             showAlert(retMess);
-                        } else {
+                        }
+                        else if (reTval.indexOf("STOPTRAN") > -1) {
+                            retMess = getString(R.string.stop_transation);
+                            //loadProBarObj.dismiss();
+                            showAlert(retMess);
+                        }else {
                             // this case consider when in retval string contains only  "FAILED"
                             retMess = getString(R.string.alert_032);
                             //loadProBarObj.dismiss();
@@ -2298,9 +2304,6 @@ public class OtherBankTranIFSC extends Activity implements OnClickListener {
             }
         }// end onPostExecute
     }// end CallWebServiceGetSrvcCharg jsonObj.put("METHODCODE", "28");
-
-
-
 
 
 }// end OtherBankTranIFSC

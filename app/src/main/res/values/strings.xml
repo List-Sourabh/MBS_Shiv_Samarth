@@ -177,7 +177,7 @@
     <string name="lbl_rech_Recharges_data">Add Data Card No</string>
     <string name="lbl_view_history">View History</string>
     <string name="lbl_biller">Select Biller:</string>
-    <string name="lbl_mmid_msg">Transfer Could Be Failed From  This Account Because MMID Is Not Generated.Do You Want To Generate MMID ?</string>
+    <string name="lbl_mmid_msg">Transfer Could Be Failed From  This Account Because Virtual Account Number Is Not Generated.Do You Want To Generate Virtual Account Number ?</string>
     <string name="alert_mandtry_field">Field Marked With * Are Mandatory</string>
     <string name="lbl_confirm_bill">Do You Want To Confirm Bill Payment?</string>
     <string name="lbl_confirm">Confirmation</string>
@@ -187,9 +187,9 @@
     <string name="alert_refund">Amount Will Refunded To Your Account</string>
     <string name="alert_yes">Yes</string>
     <string name="alert_no">No</string>
-    <string name="alert_unableGenMMIDwithReq">Unable To Generate  MMID.Your Request Is Registered With Request Id Is  </string>
-    <string name="alert_unablegenMMID">Unable To Generate  MMID</string>
-    <string name="alert_MMIDsmswithMob">Your MMID Will Send Through SMS To Your Register Mobile Number And Your Request Is Registered With Request Id</string>
+    <string name="alert_unableGenMMIDwithReq">Unable To Generate  Virtual Account Number.Your Request Is Registered With Request Id Is  </string>
+    <string name="alert_unablegenMMID">Unable To Generate  Virtual Account Number</string>
+    <string name="alert_MMIDsmswithMob">Your Virtual Account Number Will Send Through SMS To Your Register Mobile Number And Your Request Is Registered With Request Id</string>
     <string name="alert_LogoutAndRelogin">Please Logout And Re-Login Again</string>
     <string name="lbl_rech_Operatorshow">Operator:</string>
     <string name="lbl_rech_Operator">Select Operator:</string>
@@ -496,7 +496,7 @@
     <string name="alert_111">Enter Transaction MPIN</string>
     <string name="alert_162">Fund Transfer Failed due to server problem.Your Request Is </string>
     <string name="lbl_genotp_btn">Generate OTP</string>
-    <string name="lbl_MMID">MMID:</string>
+    <string name="lbl_MMID">Virtual Account Number:</string>
     <string name="lbl_bank_nm">Select Bank Name</string>
     <string name="lbl_state">Select State</string>
     <string name="lbl_district">Select District</string>
@@ -515,15 +515,16 @@
     <string name="alert_185">IFSC Code Not Found In CBS. Please Contact To Bank</string>
     <string name="alert_021">Failed To Add Other Bank Beneficiary Due To Server Problem.</string>
     <string name="alert_022">Other Bank Beneficiary Added Successfully.</string>
-    <string name="alert_151">Account Number/IFSC or MMID/Mobile No Is Compulsary</string>
+    <string name="alert_151">Account Number/IFSC or Virtual Account Number/Mobile No Is Compulsary</string>
     <string name="alert_166">IFSC Code Must Be Of 11 Character.</string>
-    <string name="alert_025">Please Enter 7-digits MMID.</string>
+    <string name="alert_025">Please Enter 7-digits Virtual Account Number.</string>
     <string name="alert_0171">Failed To Add Same Bank Beneficiary Due To Duplicate Nickname.</string>
     <string name="alert_018">Failed To Add Same Bank Beneficiary Due To Server Problem.</string>
 
     <string name="alert_016">Failed To Add Same Bank Beneficiary Due To Duplicate Account Number.</string>
     <string name="alert_023">Same Bank Beneficiary Added Successfully.</string>
     <string name="lbl_other_bank_fund_trans_rtgs">RTGS/NEFT Transfer</string>
+    <string name="lbl_other_bank_imps">IMPS Transfer</string>
     <string name="lbl_same_add_benf">Add Same Bank Beneficiary</string>
     <string name="lbl_other_add_benf">Add Other Bank Beneficiary</string>
     <string name="lbl_payment_options">Payment Options</string>
@@ -547,11 +548,13 @@
     <string name="alert_benfivalid">Beneficiary Details Invalid.</string>
     <string name="alert_imps">Problem At Server Please Try After Sometime.</string>
     <string name="alert_174">Please Select Debit Account</string>
-    <string name="alert_160">Unable To Generate  MMID.Your Request Is Registered With Request Id Is  </string>
-    <string name="alert_158">Unable To Generate  MMID</string>
-    <string name="alert_159">Your MMID Will Send Through SMS To Your Register Mobile Number And Your Request Is Registered With Request Id</string>
+    <string name="alert_160">Unable To Generate  Virtual Account Number.Your Request Is Registered With Request Id Is  </string>
+    <string name="alert_158">Unable To Generate  Virtual Account Number</string>
+    <string name="alert_159">Your Virtual Account Number Will Send Through SMS To Your Register Mobile Number And Your Request Is Registered With Request Id</string>
 
     <string name="SML_alert_175">Network Unavailable. Please Check Your Internet Connection.</string>
+<!--    new changes-->
+    <string name="stop_transation">Transfer Services Are Unavailable</string>
 
     <item name="zxing_decode" type="id" />
     <item name="zxing_decode_failed" type="id" />

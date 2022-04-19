@@ -5,11 +5,10 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences.Editor;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.net.NetworkInfo.State;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -17,10 +16,8 @@ import android.text.InputFilter;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -49,10 +46,9 @@ import mbLib.DialogBox;
 import mbLib.MBSUtils;
 import mbLib.MyThread;
 
-
-public class OtherBankTranRTGS extends Activity implements OnClickListener {
-    OtherBankTranRTGS otherBnkIfsc = null;
-    OtherBankTranRTGS act;
+public class OtherBankTranIMPS extends Activity implements View.OnClickListener {
+    OtherBankTranIMPS otherBnkIfsc = null;
+    OtherBankTranIMPS act;
     Button btn_submit, btn_confirm;
     Spinner spi_debit_account, spi_sel_beneficiery, spi_payment_option;
     ImageButton spinner_btn, spinner_btn2, btn_home, btn_back, spinner_btn3;
@@ -60,7 +56,7 @@ public class OtherBankTranRTGS extends Activity implements OnClickListener {
     EditText txtAccNo, txtAmt, txtRemk, txtBank, txtBranch, txtIfsc;
     DialogBox dbs;
     ProgressBar pb_wait;
-    Editor e;
+    SharedPreferences.Editor e;
     String benf = "";
     LinearLayout confirm_layout, other_bnk_layout;
     private String benInfo = "";
@@ -102,7 +98,7 @@ public class OtherBankTranRTGS extends Activity implements OnClickListener {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.other_bank_tranf_rtgs);
+        setContentView(R.layout.other_bank_tranf_imps);
         //getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
         act = this;
         dbms = new DatabaseManagement("list.shivsamarth_mbs", "shivsamMBS");
@@ -161,7 +157,7 @@ public class OtherBankTranRTGS extends Activity implements OnClickListener {
         spinner_btn2 = (ImageButton) findViewById(R.id.spinner_btn2);
         spinner_btn3 = (ImageButton) findViewById(R.id.spinner_btn3);
         txt_heading = (TextView) findViewById(R.id.txt_heading);
-        txt_heading.setText(getString(R.string.lbl_other_bank_fund_trans_rtgs));
+        txt_heading.setText(getString(R.string.lbl_other_bank_imps));
         //btn_home.setImageResource(R.mipmap.ic_home_d);
         btn_back.setImageResource(R.mipmap.backover);
         confirm_layout = (LinearLayout) findViewById(R.id.othr_confirm_layout);
@@ -171,8 +167,8 @@ public class OtherBankTranRTGS extends Activity implements OnClickListener {
         spinner_btn.setOnClickListener(this);
         spinner_btn2.setOnClickListener(this);
         spinner_btn3.setOnClickListener(this);
-        String[] arrList = {"NEFT", "RTGS"};
-        ArrayAdapter<String> paymentOption = new ArrayAdapter<String>(OtherBankTranRTGS.this, R.layout.spinner_item, arrList);
+        String[] arrList = {"IMPS"};
+        ArrayAdapter<String> paymentOption = new ArrayAdapter<String>(OtherBankTranIMPS.this, R.layout.spinner_item, arrList);
         paymentOption.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spi_payment_option.setAdapter(paymentOption);
@@ -190,7 +186,7 @@ public class OtherBankTranRTGS extends Activity implements OnClickListener {
         pb_wait.setVisibility(ProgressBar.INVISIBLE);
 
         spi_sel_beneficiery
-                .setOnItemSelectedListener(new OnItemSelectedListener() {
+                .setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     String otherIfsctxtIFSCCode = "";
                     String otherIfsctxtBank = "";
                     String otherIfsctxtBranch = "";
@@ -260,7 +256,7 @@ public class OtherBankTranRTGS extends Activity implements OnClickListener {
                 });
 
         spi_debit_account
-                .setOnItemSelectedListener(new OnItemSelectedListener() {
+                .setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
                     @Override
                     public void onItemSelected(AdapterView<?> arg0, View arg1,
@@ -322,10 +318,9 @@ public class OtherBankTranRTGS extends Activity implements OnClickListener {
         //System.out.println("========== 8 ============");
         txtAmt.setFilters(new InputFilter[]{new DecimalDigitsInputFilter(2)});
 
-        t1 = new MyThread(timeOutInSecs, OtherBankTranRTGS.this, var1, var3);
+        t1 = new MyThread(timeOutInSecs, OtherBankTranIMPS.this, var1, var3);
         t1.start();
     }
-
     public void addAccounts(String str) {
         //System.out.println("OtherBankTranRTGS IN addAccounts()" + str);
 
@@ -359,7 +354,7 @@ public class OtherBankTranRTGS extends Activity implements OnClickListener {
             debAccArr = arrList.toArray(debAccArr);
 			/*CustomeSpinnerAdapter debAccs = new CustomeSpinnerAdapter(act,
 					R.layout.spinner_layout, debAccArr);*/
-            ArrayAdapter<String> debAccs = new ArrayAdapter<String>(OtherBankTranRTGS.this, R.layout.spinner_item, debAccArr);
+            ArrayAdapter<String> debAccs = new ArrayAdapter<String>(OtherBankTranIMPS.this, R.layout.spinner_item, debAccArr);
             debAccs.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spi_debit_account.setAdapter(debAccs);
             acnt_inf = spi_debit_account.getItemAtPosition(
@@ -371,7 +366,6 @@ public class OtherBankTranRTGS extends Activity implements OnClickListener {
         }
 
     }// end addAccount
-
     private void addBeneficiaries(String retval) {
         //System.out				.println("================ IN addBeneficiaries() of OtherBankTranRTGS ======================");
         //System.out.println("OtherBankTranRTGS IN addBeneficiaries()" + retval);
@@ -411,7 +405,7 @@ public class OtherBankTranRTGS extends Activity implements OnClickListener {
             benfArr = arrList.toArray(benfArr);
 			/*CustomeSpinnerAdapter accs = new CustomeSpinnerAdapter(act,
 					R.layout.spinner_layout, benfArr);*/
-            ArrayAdapter<String> benfAccs = new ArrayAdapter<String>(OtherBankTranRTGS.this, R.layout.spinner_item, benfArr);
+            ArrayAdapter<String> benfAccs = new ArrayAdapter<String>(OtherBankTranIMPS.this, R.layout.spinner_item, benfArr);
             benfAccs.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spi_sel_beneficiery.setAdapter(benfAccs);
 
@@ -425,7 +419,7 @@ public class OtherBankTranRTGS extends Activity implements OnClickListener {
         ConnectivityManager cm = (ConnectivityManager) this.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo ni = cm.getActiveNetworkInfo();
         try {
-            State state = ni.getState();
+            NetworkInfo.State state = ni.getState();
             boolean state1 = ni.isAvailable();
             //System.out.println("OtherBankTranRTGS	in chkConnectivity () state1 ---------"							+ state1);
             if (state1) {
@@ -505,7 +499,6 @@ public class OtherBankTranRTGS extends Activity implements OnClickListener {
 
         return flag;
     }// end chkConnectivity
-
     class CallWebService_fetch_all_beneficiaries extends
             AsyncTask<Void, Void, Void> {
 
@@ -637,7 +630,6 @@ public class OtherBankTranRTGS extends Activity implements OnClickListener {
         }// end onPostExecute
 
     }// end callWbService
-
     public void post_fetch_all_beneficiaries(String retval) {
         respcode = "";
         respdesc_fetch_all_beneficiaries = "";
@@ -923,7 +915,6 @@ public class OtherBankTranRTGS extends Activity implements OnClickListener {
         }// end onPostExecute
 
     }// end callWbService2
-
     public void post_SaveTransfer(String retval) {
         respcode = "-1";
         respdesc_SaveTransfer = "";
@@ -1209,7 +1200,7 @@ public class OtherBankTranRTGS extends Activity implements OnClickListener {
 
         switch (v.getId()) {
             case R.id.btn_back:
-                Intent intet = new Intent(OtherBankTranRTGS.this, FundTransferMenuActivity.class);
+                Intent intet = new Intent(OtherBankTranIMPS.this, FundTransferMenuActivity.class);
                 intet.putExtra("var1", var1);
                 intet.putExtra("var3", var3);
                 startActivity(intet);
@@ -1424,7 +1415,7 @@ public class OtherBankTranRTGS extends Activity implements OnClickListener {
         alert.show();
     }
 
-    public class InputDialogBox extends Dialog implements OnClickListener {
+    public class InputDialogBox extends Dialog implements View.OnClickListener {
         Activity activity;
         String msg, title;
         Context appAcontext;
@@ -1668,4 +1659,6 @@ public class OtherBankTranRTGS extends Activity implements OnClickListener {
         t1.sec = -1;
         System.gc();
     }
-}// end OtherBankTranIFSC
+}
+
+

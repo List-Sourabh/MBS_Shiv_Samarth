@@ -17,15 +17,22 @@
         <entry key="..\:/Shubham/Android Projects/MBS/shivSamarthMBS/app/src/main/res/layout/sendviaqrcode.xml" value="0.1921875" />
         <entry key="..\:/Shubham/Android Projects/MBS/shivSamarthMBS/app/src/main/res/layout/spinner_dropdown_item.xml" value="0.1921875" />
         <entry key="..\:/Shubham/Android Projects/MBS/shivSamarthMBS/app/src/main/res/layout/splash_page.xml" value="0.18" />
+        <entry key="..\:/Shubham/Android Projects/MBS/shivSamarthMBS_Original/app/src/main/res/layout/add_otherbank_beneficiary.xml" value="0.1921875" />
         <entry key="..\:/Shubham/Android Projects/MBS/shivSamarthMBS_Original/app/src/main/res/layout/dash.xml" value="0.1712962962962963" />
+        <entry key="..\:/Shubham/Android Projects/MBS/shivSamarthMBS_Original/app/src/main/res/layout/finance_submenu.xml" value="0.1921875" />
         <entry key="..\:/Shubham/Android Projects/MBS/shivSamarthMBS_Original/app/src/main/res/layout/login.xml" value="0.17314814814814813" />
         <entry key="..\:/Shubham/Android Projects/MBS/shivSamarthMBS_Original/app/src/main/res/layout/other_bank_tranf_ifsc.xml" value="0.18" />
         <entry key="..\:/Shubham/Android Projects/MBS/shivSamarthMBS_Original/app/src/main/res/layout/other_bank_tranf_rtgs.xml" value="0.19" />
         <entry key="..\:/Shubham/Android Projects/MBS/shivSamarthMBS_Original/app/src/main/res/layout/sendviaqrcode.xml" value="0.1921875" />
+        <entry key="..\:/Sourabh/Android Projects/MBS/MBS_shivSamarth/app/src/main/res/layout/header.xml" value="0.1921875" />
+        <entry key="..\:/Sourabh/Android Projects/MBS/MBS_shivSamarth/app/src/main/res/layout/login.xml" value="0.1921875" />
+        <entry key="..\:/Sourabh/Android Projects/MBS/MBS_shivSamarth/app/src/main/res/layout/other_bank_tranf_ifsc.xml" value="0.25" />
+        <entry key="..\:/Sourabh/Android Projects/MBS/MBS_shivSamarth/app/src/main/res/layout/other_bank_tranf_imps.xml" value="0.1921875" />
+        <entry key="..\:/Sourabh/Android Projects/MBS/MBS_shivSamarth/app/src/main/res/layout/splash_page.xml" value="0.1921875" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

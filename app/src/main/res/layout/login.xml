@@ -87,7 +87,7 @@
                 android:inputType="numberPassword"
                 android:nextFocusDown="@id/Password"
                 android:nextFocusUp="@id/LoginButton"
-                android:text="111111" />
+                 />
         </LinearLayout>
 
         <LinearLayout
