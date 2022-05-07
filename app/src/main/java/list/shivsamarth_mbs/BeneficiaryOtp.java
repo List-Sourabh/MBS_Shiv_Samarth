@@ -1,28 +1,5 @@
 package list.shivsamarth_mbs;
 
-import java.security.PrivateKey;
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
-
-import javax.crypto.spec.SecretKeySpec;
-
-import mbLib.CommonLib;
-import mbLib.CryptoClass;
-import mbLib.DatabaseManagement;
-import mbLib.DialogBox;
-
-import mbLib.MBSUtils;
-import mbLib.MyThread;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.ksoap2.SoapEnvelope;
-import org.ksoap2.serialization.MarshalBase64;
-import org.ksoap2.serialization.SoapObject;
-import org.ksoap2.serialization.SoapPrimitive;
-import org.ksoap2.serialization.SoapSerializationEnvelope;
-import org.ksoap2.transport.HttpTransportSE;
-
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
@@ -39,15 +16,33 @@ import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.Window;
 import android.view.View.OnClickListener;
-import android.view.WindowManager;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.ksoap2.SoapEnvelope;
+import org.ksoap2.serialization.SoapObject;
+import org.ksoap2.serialization.SoapSerializationEnvelope;
+import org.ksoap2.transport.HttpTransportSE;
+
+import java.security.PrivateKey;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
+import javax.crypto.spec.SecretKeySpec;
+
+import mbLib.CommonLib;
+import mbLib.CryptoClass;
+import mbLib.DatabaseManagement;
+import mbLib.DialogBox;
+import mbLib.MBSUtils;
+import mbLib.MyThread;
 
 public class BeneficiaryOtp extends Activity implements OnClickListener {
 	int cnt = 0, flag = 0;
@@ -673,7 +668,10 @@ public class BeneficiaryOtp extends Activity implements OnClickListener {
 		}
 	}
 
-	public void postSuccess_validateOTP(String retval) {
+	public void
+
+
+			(String retval) {
 
 		CallWebService_save_beneficiary storeTran = new CallWebService_save_beneficiary();
 		storeTran.execute();
@@ -708,7 +706,10 @@ public class BeneficiaryOtp extends Activity implements OnClickListener {
 				jObj.put("OSVERSION", Build.VERSION.RELEASE);
 				jObj.put("LATITUDE", location.split("~")[0]);
 				jObj.put("LONGITUDE", location.split("~")[1]);
-				jObj.put("METHODCODE", "14");
+				if(strFromAct.equalsIgnoreCase("ADDSAMBENF"))
+					jObj.put("METHODCODE", "14");
+				else
+					jObj.put("METHODCODE", "95");
 				Log.e("sevebenf", "========" + jObj.toString());
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -758,14 +759,9 @@ public class BeneficiaryOtp extends Activity implements OnClickListener {
 				JSONObject jsonObj;
 				try {
 					String str = CryptoClass.Function6(var5, var2);
+					Log.e("BNFOTP","str=="+str);
 					jsonObj = new JSONObject(str.trim());
-
-					/*
-					 * if (jsonObj.has("VALIDATIONDATA") &&
-					 * ValidationData.equals
-					 * (jsonObj.getString("VALIDATIONDATA"))) {
-					 */
-
+					Log.e("BNFOTP","jsonObj=="+jsonObj.toString());
 					if (jsonObj.has("RESPCODE")) {
 						respcode = jsonObj.getString("RESPCODE");
 					} else {

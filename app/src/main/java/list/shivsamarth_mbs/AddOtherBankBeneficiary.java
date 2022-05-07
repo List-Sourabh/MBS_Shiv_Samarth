@@ -1,30 +1,5 @@
 package list.shivsamarth_mbs;
 
-import java.security.PrivateKey;
-import java.util.ArrayList;
-
-import javax.crypto.spec.SecretKeySpec;
-
-import mbLib.CryptoClass;
-import mbLib.DatabaseManagement;
-import mbLib.MyThread;
-
-import mbLib.MBSUtils;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.ksoap2.SoapEnvelope;
-import org.ksoap2.serialization.SoapObject;
-import org.ksoap2.serialization.SoapSerializationEnvelope;
-import org.ksoap2.transport.HttpTransportSE;
-
-
-
-
-
-
-
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
@@ -43,7 +18,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
@@ -55,6 +29,24 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.ksoap2.SoapEnvelope;
+import org.ksoap2.serialization.SoapObject;
+import org.ksoap2.serialization.SoapSerializationEnvelope;
+import org.ksoap2.transport.HttpTransportSE;
+
+import java.security.PrivateKey;
+import java.util.ArrayList;
+
+import javax.crypto.spec.SecretKeySpec;
+
+import mbLib.CryptoClass;
+import mbLib.DatabaseManagement;
+import mbLib.MBSUtils;
+import mbLib.MyThread;
 
 public class AddOtherBankBeneficiary extends Activity implements OnClickListener {
 	AddOtherBankBeneficiary act = this;
@@ -112,11 +104,9 @@ public class AddOtherBankBeneficiary extends Activity implements OnClickListener
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.add_otherbank_beneficiary);
-		//getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
 		dbms = new DatabaseManagement("list.shivsamarth_mbs", "shivsamMBS");
 		img_heading = (ImageView) findViewById(R.id.img_heading);
 		img_heading.setBackgroundResource(R.mipmap.add_beneficiary);
-		// SharedPreferences sp = act.getSharedPreferences(MY_SESSION,
 		 var1 = (PrivateKey) getIntent().getSerializableExtra("var1");
 	       var3 = (String) getIntent().getSerializableExtra("var3");
 		Cursor c1 = dbms.selectFromTable("SHAREDPREFERENCE", "", null);// ("select * from ",
@@ -127,11 +117,7 @@ public class AddOtherBankBeneficiary extends Activity implements OnClickListener
 				Log.e("retValStr", "......" + custId);
 			}
 		}
-		// Context.MODE_PRIVATE);
 
-		// custId = sp.getString("custId", "custId");
-		// userId=sp.getString("userId", "userId");
-		System.out.println("============ inside onCreate 3 ===============");
 		txtIFSC_Code = (EditText) findViewById(R.id.txtIFSC_Code2);
 		txtMMID = (EditText) findViewById(R.id.txtMMID2);
 		txtMobile_No = (EditText) findViewById(R.id.txtMobile_No2);
@@ -139,14 +125,12 @@ public class AddOtherBankBeneficiary extends Activity implements OnClickListener
 		txtAccNoconf= (EditText) findViewById(R.id.txtAccNoconf);
 		txtName = (EditText) findViewById(R.id.txtName2);
 		txtBank = (EditText) findViewById(R.id.txt_bank_name);
-		// txtBranch = (EditText) rootView.findViewById(R.id.txtBranch2);
 		txtEmail = (EditText) findViewById(R.id.txtEmail2);
 		txtNick_Name = (EditText) findViewById(R.id.txtNick_Name2);
 		p_wait = (ProgressBar) findViewById(R.id.pro_bar);
 		btn_home = (ImageButton) findViewById(R.id.btn_home);
 		btn_back = (ImageButton) findViewById(R.id.btn_back);
 		txt_heading = (TextView) findViewById(R.id.txt_heading);
-		//btn_home.setImageResource(R.mipmap.ic_home_d);
 		btn_back.setImageResource(R.mipmap.backover);
 		txt_heading.setText(getString(R.string.frmtitle_add_other_bnk_bnf));
 
@@ -181,14 +165,9 @@ public class AddOtherBankBeneficiary extends Activity implements OnClickListener
 
 		System.out.println("============ inside onCreate 4 ===============");
 		btn_fetchBnkBrn.setOnClickListener(this);
-		// /btn_fetchName.setOnClickListener(this);
 		btn_submit.setOnClickListener(this);
-		// btn_fetchBnkBrn.setTypeface(tf_calibri);
-		// btn_submit.setTypeface(tf_calibri);
 		txtIFSC_Code.addTextChangedListener(new TextWatcher() {
-
 			public void afterTextChanged(Editable s) {
-				
 			}
 
 			@Override

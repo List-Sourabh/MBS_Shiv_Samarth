@@ -11,9 +11,9 @@
     <string name="map_key">AIzaSyB3z-E-zchBsS1Q9Vq2RKaP2h1CnUZ5scM</string>
 
 
-    <string name="url">http://listspl.ddns.net:8087/axis2/services/FrontLineWebServices</string>
+<!--    <string name="url">http://listspl.ddns.net:8087/axis2/services/FrontLineWebServices</string>-->
     <!--<string name="url"> http://59.92.8.50:18038/axis2/services/FrontLineWebServices</string>-->
-    <!--<string name="url">https://mobilebanking.shivsamarth.co.in:18038/axis2/services/FrontLineWebServices</string>-->
+    <string name="url">https://mobilebanking.shivsamarth.co.in:18038/axis2/services/FrontLineWebServices</string>
 
     <string name="alert_179_2">Problem At Server Please Try After Sometime.</string>
     <string name="namespace">http://frontline.list</string>

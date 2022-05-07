@@ -1,8 +1,7 @@
 package mbLib;
 
 import android.app.Activity;
-import android.app.Fragment;
-import android.app.FragmentManager;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.AsyncTask;
 import android.util.Log;
@@ -20,7 +19,7 @@ import javax.crypto.spec.SecretKeySpec;
 
 import list.shivsamarth_mbs.ErrorDialogClass;
 import list.shivsamarth_mbs.R;
-import list.shivsamarth_mbs.SessionTimeout;
+import list.shivsamarth_mbs.SessionOut;
 
 public class MyThread extends Thread {
     public int sec;
@@ -158,9 +157,12 @@ public class MyThread extends Thread {
         Log.e("fromAct", "fromAct11111" + fromAct);
         Log.e("fromAct", "fromAct11111" + fromAct);
 
-        Fragment fragment = new SessionTimeout();
-        FragmentManager fragmentManager = act.getFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.frame_container, fragment).commitAllowingStateLoss();
+//        Fragment fragment = new SessionTimeout();
+//        FragmentManager fragmentManager = act.getFragmentManager();
+//        fragmentManager.beginTransaction().replace(R.id.frame_container, fragment).commitAllowingStateLoss();
+        Intent intent = new Intent(act, SessionOut.class);
+        act.startActivity(intent);
+        act.finish();
     }
 
     public void showAlert(final String str) {

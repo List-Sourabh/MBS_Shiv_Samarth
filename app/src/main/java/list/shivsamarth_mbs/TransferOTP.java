@@ -175,11 +175,6 @@ public class TransferOTP extends Activity implements OnClickListener {
                 c1.close();
             }
         }
-
-        /*
-         * InputDialogBox inputBox = new InputDialogBox(act); inputBox.show();
-         */
-
         int flag = chkConnectivity();
         if (flag==0) {
             regenOtp = "N";
@@ -272,14 +267,7 @@ public class TransferOTP extends Activity implements OnClickListener {
                             InputDialogBox inputBox = new InputDialogBox(act);
                             inputBox.show();
                         }
-						/*else if(!str.equalsIgnoreCase(act.getString(R.string.alert_076)))
-						{
-							FragmentManager fragmentManager;
-							Fragment fragment = new FundTransferMenuActivity(act);
-							act.setTitle(getString(R.string.lbl_same_bnk_trans));
-							fragmentManager = act.getFragmentManager();
-							fragmentManager.beginTransaction().replace(R.id.frame_container, fragment).commit();
-						}*/
+
                         else
                             this.dismiss();
                         break;
@@ -335,11 +323,7 @@ public class TransferOTP extends Activity implements OnClickListener {
                     showAlert(retMess);// setAlert();
                     this.show();
                 } else {
-                    /*
-                     * int flag = comnObj.chkConnectivity(); if (flag == 0) {
-                     * regenOtp="N"; CallWebServiceGenerateOtp c = new
-                     * CallWebServiceGenerateOtp(); c.execute(); }
-                     */
+
                     this.hide();
                 }
             } catch (Exception e) {
@@ -364,10 +348,6 @@ public class TransferOTP extends Activity implements OnClickListener {
                 jsonObj.put("IMEINO", MBSUtils.getImeiNumber(act));
                 jsonObj.put("SIMNO", MBSUtils.getSimNumber(act));
                 jsonObj.put("METHODCODE", "29");
-
-                // valuesToEncrypt[0] = custid;
-                // valuesToEncrypt[1] =
-                // MBSUtils.getImeiNumber(DashboardDesignActivity.this);
             } catch (JSONException je) {
                 je.printStackTrace();
             }
@@ -375,7 +355,7 @@ public class TransferOTP extends Activity implements OnClickListener {
 
         }
 
-        ;
+
 
         @Override
         protected Void doInBackground(Void... arg0) {
@@ -495,19 +475,10 @@ public class TransferOTP extends Activity implements OnClickListener {
                 jsonObj.put("ISREGISTRATION", "N");
                 jsonObj.put("SIMNO", MBSUtils.getSimNumber(act));
                 jsonObj.put("METHODCODE", "20");
-                // Log.e("jayesh=","===11");
-                Log.e("validateotpbenf", "========" + jsonObj.toString());
-                // jObj.put("VALIDATIONDATA",ValidationData);
-
-                // jObj.put("TRANPIN", encrptdTranMpin);
-
             } catch (Exception e) {
                 e.printStackTrace();
             }
-
         }
-
-        ;
 
         @Override
         protected Void doInBackground(Void... arg0) {
@@ -553,11 +524,6 @@ public class TransferOTP extends Activity implements OnClickListener {
                     String str = CryptoClass.Function6(var5, var2);
                     jsonObj = new JSONObject(str.trim());
 
-                    /*
-                     * if (jsonObj.has("VALIDATIONDATA") &&
-                     * ValidationData.equals
-                     * (jsonObj.getString("VALIDATIONDATA"))) {
-                     */
                     if (jsonObj.has("RESPCODE")) {
                         respcode = jsonObj.getString("RESPCODE");
                     } else {
@@ -588,13 +554,7 @@ public class TransferOTP extends Activity implements OnClickListener {
                             retMess = act.getString(R.string.alert_076);
                             showAlert(retMess);
                         }
-
                     }
-
-                    /*
-                     * } else { MBSUtils.showInvalidResponseAlert(act); }
-                     */
-
                 } catch (JSONException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
@@ -632,7 +592,6 @@ public class TransferOTP extends Activity implements OnClickListener {
                 } else if (strFromAct.equalsIgnoreCase("IMPSBANK")) {
                     jObj.put("TRANSFERTYPE", "P2A");
                 }
-                //jObj.put("OTPVAL", ListEncryption.encryptData(strOTP+strCustId));
                 String location = MBSUtils.getLocation(act);
                 jObj.put("IMEINO", MBSUtils.getImeiNumber(act));
                 jObj.put("REFID", strRefId);
@@ -645,22 +604,15 @@ public class TransferOTP extends Activity implements OnClickListener {
                 jObj.put("OSVERSION", Build.VERSION.RELEASE);
                 jObj.put("LATITUDE", location.split("~")[0]);
                 jObj.put("LONGITUDE", location.split("~")[1]);
-                jObj.put("METHODCODE", "16");
-                Log.e("transfertran", "========" + jObj.toString());
-               
-				
-				/*Log.e("MOBILENO=","MOBILENO==="+MBSUtils.getMyPhoneNO(act));
-				Log.e("IPADDRESS=","IPADDRESS==="+MBSUtils.getLocalIpAddress());
-				Log.e("OSVERSION=","OSVERSION==="+Build.VERSION.RELEASE);
-				Log.e("LATITUDE=","LATITUDE==="+location.split("~")[0]);
-				Log.e("LONGITUDE=","LONGITUDE==="+location.split("~")[1]);*/
+
+                if(strFromAct.equalsIgnoreCase("IMPSBANK") || strFromAct.equalsIgnoreCase("RTNTBANK"))
+                    jObj.put("METHODCODE","96");
+                else
+                    jObj.put("METHODCODE","16");
             } catch (Exception e) {
                 e.printStackTrace();
             }
-
         }
-
-        ;
 
         @Override
         protected Void doInBackground(Void... arg0) {

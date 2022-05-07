@@ -181,17 +181,7 @@ public class OtherBankTranIFSC extends Activity implements OnClickListener {
         btn_back.setImageResource(R.mipmap.backover);
         btn_back.setOnClickListener(this);
 
-  /*      btn_home1.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent in = new Intent(act, DashboardActivity.class);
-                in.putExtra("var1", var1);
-                in.putExtra("var3", var3);
-                startActivity(in);
-                act.finish();
-            }
-        });*/
-        //btn_back.setOnClickListener(this);
+
         spinner_btn.setOnClickListener(this);
         spinner_btn2.setOnClickListener(this);
         txtAmt.setText("");
@@ -251,12 +241,6 @@ public class OtherBankTranIFSC extends Activity implements OnClickListener {
         if (flag == 0) {
             new CallWebService_fetch_all_beneficiaries().execute();
         }
-
-        /* flag = chkConnectivity();
-        if (act.haveNetworkConnection(this)) {
-            new CallWebService_fetch_all_beneficiaries().execute();
-        }*/
-
         pb_wait.setMax(10);
         pb_wait.setProgress(1);
         pb_wait.setVisibility(ProgressBar.INVISIBLE);
