@@ -668,14 +668,8 @@ public class BeneficiaryOtp extends Activity implements OnClickListener {
 		}
 	}
 
-	public void
 
 
-			(String retval) {
-
-		CallWebService_save_beneficiary storeTran = new CallWebService_save_beneficiary();
-		storeTran.execute();
-	}
 
 	class CallWebService_save_beneficiary extends AsyncTask<Void, Void, Void> {
 
