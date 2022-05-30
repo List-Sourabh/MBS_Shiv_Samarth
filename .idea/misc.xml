@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Shubham/Android Projects/MBS/MBS_Shiv_Samarth/app/src/main/res/layout/balance_report.xml" value="0.1921875" />
+        <entry key="..\:/Shubham/Android Projects/MBS/MBS_Shiv_Samarth/app/src/main/res/layout/dash.xml" value="0.1921875" />
+        <entry key="..\:/Shubham/Android Projects/MBS/MBS_Shiv_Samarth/app/src/main/res/layout/loanaccount_details.xml" value="0.1921875" />
+        <entry key="..\:/Shubham/Android Projects/MBS/MBS_Shiv_Samarth/app/src/main/res/layout/savingaccounts.xml" value="0.1921875" />
         <entry key="..\:/Shubham/Android Projects/MBS/shivSamarthMBS/app/src/main/res/layout/dash.xml" value="0.1921875" />
         <entry key="..\:/Shubham/Android Projects/MBS/shivSamarthMBS/app/src/main/res/layout/splash_page.xml" value="0.18" />
       </map>

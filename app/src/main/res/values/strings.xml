@@ -563,4 +563,7 @@
         <attr name="zxing_viewfinder_mask" format="color" />
     </declare-styleable>
 
+<!--    Added by Shubham-->
+    <string name="vir_ac_no">Virtual Account Number</string>
+    <string name="vir_upa_ID">Virtual UPA ID</string>
 </resources>

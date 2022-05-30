@@ -44,7 +44,7 @@ public class SavingAccountsDetails extends Activity implements OnClickListener
 	SavingAccountsDetails act;
 	TextView actype, branch, sch_acno, name, bal,txt_heading;
 	ImageButton btn_home, back;
-	EditText unclearbal;
+	EditText unclearbal,txt_vir_ac_no,txt_vir_upa_no;
 	String actype_val, branch_val, sch_acno_val, name_val, bal_val;
 	String str = "", spi_str = "";
 	String balance;
@@ -98,6 +98,8 @@ public class SavingAccountsDetails extends Activity implements OnClickListener
 		btn_home= (ImageButton) findViewById(R.id.btn_home);
 		
 		txt_heading=(TextView) findViewById(R.id.txt_heading);
+		txt_vir_ac_no =(EditText) findViewById(R.id.txt_vir_ac_no);
+		txt_vir_upa_no =(EditText) findViewById(R.id.txt_vir_upa_no);
 		txt_heading.setText(getString(R.string.lbl_acc_details));
 		//btn_home.setImageResource(R.mipmap.ic_home_d);
 		back.setImageResource(R.mipmap.backover);
@@ -184,6 +186,9 @@ public class SavingAccountsDetails extends Activity implements OnClickListener
 		else
 			bal.setText(MBSUtils.amountFormat("750",true,act));*/
 		unclearbal.setText(retValues[4]);
+		txt_vir_ac_no.setText(retValues[5]);
+		txt_vir_upa_no.setText(retValues[6]);
+
 	}
 
 	@Override

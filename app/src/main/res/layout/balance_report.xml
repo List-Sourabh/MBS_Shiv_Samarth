@@ -136,6 +136,44 @@
                 android:textColor="@color/rep_txt_color" >
             </mbLib.CustomEditText>
 
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="@string/vir_ac_no"
+                android:textColor="#372c24" >
+            </mbLib.CusFntTextView>
+
+            <mbLib.CustomEditText
+                android:id="@+id/txt_vir_ac_no"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:inputType="number"
+                android:text=""
+                android:textColor="@color/rep_txt_color" >
+            </mbLib.CustomEditText>
+
+            <mbLib.CusFntTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="@string/vir_upa_ID"
+                android:textColor="#372c24">
+            </mbLib.CusFntTextView>
+
+            <mbLib.CustomEditText
+                android:id="@+id/txt_vir_upa_no"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:inputType="number"
+                android:text=""
+                android:textColor="@color/rep_txt_color" >
+            </mbLib.CustomEditText>
+
+
+
             <mbLib.CustomButton
                 android:id="@+id/btn_back_balrep"
                 style="@style/button_text"
